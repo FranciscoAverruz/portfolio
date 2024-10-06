@@ -1,0 +1,19 @@
+{
+  "greeting" : "Hello",
+  "IAm":"I am",
+  "profession" : "Information systems engineer and full stack developer",
+  "aText":{
+      "aT1" : "During my academic career, I acquired a solid foundation in computer science and a practical approach to software development.",
+      "aT2" : "My passion for technology has led me to explore various languages and tools, training myself in technologies such as:",
+      "aT3" : "My goal is to continue learning and have opportunities that challenge me and allow me to grow as a developer, providing innovative solutions to current technological problems."
+      },
+  "aboutNav": "About me", 
+  "projectsNav": "Projects", 
+  "experienceNav": "Experience", 
+  "contactNav": "Contact",
+
+  "database":"Database",
+  "testing":"Testing",
+  "versionsControl":"Versions Control"
+
+}

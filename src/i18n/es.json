@@ -1,0 +1,18 @@
+{
+  "greeting" : "Hola",
+  "IAm":"Soy",
+  "profession" : "Ingeniero en sistemas de información y desarrollador full stack",
+  "aText":{
+      "aT1" : "Durante mi trayectoria académica, adquirí una sólida base en ciencias de la computación y un enfoque práctico en el desarrollo de software.",
+      "aT2" : "Mi pasión por la tecnología me ha llevado a explorar diversos lenguajes y herramientas, capacitándome en tecnologías como:",
+      "aT3" : "Mi objetivo es seguir aprendiendo y tener oportunidades que me reten y me permitan crecer como desarrollador, aportando soluciones innovadoras a problemas tecnológicos actuales."
+      },
+  "aboutNav": "Sobre mí", 
+  "projectsNav": "Proyectos", 
+  "experienceNav": "Experiencia", 
+  "contactNav": "Contacto",
+
+  "database":"Base de Datos",
+  "testing":"Pruebas",
+  "versionsControl":"Control de Versiones"
+}
