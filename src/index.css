@@ -3,32 +3,31 @@
 @tailwind utilities;
 
 @layer components {
-  .layoutborder {
-    @apply rounded-xl shadow-lg;
+  .layout {
+    @apply bg-white/70 dark:bg-dark-primary/70 backdrop-blur;
   }
-  .grad-bg-dark {
-    @apply bg-gradient-to-b from-dark-secondary to-dark-primary;
-  }
-  .btnStyle {
-    @apply  min-h-[40px] rounded-xl text-base px-2 lg:py-1 sm:px-2 md:px-4 shadow-md bg-btn-light-mode-1 text-white transition ease-in-out duration-300 hover:bg-btn-dark-mode-4 dark:bg-btn-dark-mode-3 dark:text-white dark:hover:bg-btn-dark-mode-5 hover:text-link
 
-    hover:focus:outline hover:ring-2 hover:ring-light-txt hover:ring-opacity-50 hover:dark:ring-dark-secondary
-    
+  .btnStyle {
+    @apply  min-h-[40px] rounded-xl text-base px-2 lg:py-1 sm:px-2 md:px-4 shadow-md bg-light-accent dark:bg-dark-accent text-white transition ease-in-out duration-300 hover:bg-light-primary dark:hover:bg-dark-secondary hover:text-light-active hover:dark:text-dark-active hover:focus:outline
     ;
   }
+
   .btnCV {
-    @apply flex w-8 h-8 bg-light-background rounded-full hover:bg-light-accent hover:text-link  justify-center items-center shadow-md;
+    @apply flex w-8 h-8 bg-light-background rounded-full hover:bg-light-secondary hover:text-light-active dark:hover:text-dark-active justify-center items-center shadow;
   }
   .iconBtnCV {
-    @apply text-xl text-light-txt w-6 h-6 hover:text-link;
+    @apply text-xl text-light-generalText w-6 h-6 hover:text-light-active dark:hover:text-dark-active;
   }
-  .h1 {
-    @apply text-2xl font-bold text-light-txt dark:text-white mb-5;
+  .title {
+    @apply text-2xl font-bold text-light-title dark:text-dark-title mb-5;
   }
-  .h2 {
-    @apply text-lg font-bold text-light-txt dark:text-dark-txt mb-5;
+  .subtitle {
+    @apply text-lg font-semibold text-light-subtitle dark:text-dark-subtitle mb-5;
+  }
+  .paragraph{
+    @apply text-light-paragraph dark:text-dark-paragraph;
   }
   .focusBtn {
-    @apply focus:outline-none focus:ring-2 focus:ring-light-txt focus:ring-opacity-50 dark:focus:ring-dark-secondary dark:focus:ring-opacity-100;
+    @apply focus:outline-none focus:ring-2 focus:ring-light-generalText focus:ring-opacity-50 dark:focus:ring-dark-secondary dark:focus:ring-opacity-100;
   }
 }

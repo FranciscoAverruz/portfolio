@@ -16,23 +16,30 @@ import tailwind from "@imgTech/tailwindCSS.svg";
 import git from "@imgTech/git.svg";
 import gitHub from "@imgTech/gitHub.svg";
 
-
 const TechCategory = ({ title, technologies }) => (
-  <div className="p-3 shadow-lg backdrop-blur-sm dark:bg-dark-accent/30 rounded-2xl">
-    <h2 className="h2 border-b-2">{title}</h2>
-    <div className="flex justify-center items-center gap-5 drop-shadow">
+  <div className="p-3 shadow-lg bg-white/35 dark:bg-dark-accent/35 rounded-2xl">
+    <h2 className="subtitle border-b-2">{title}</h2>
+    <div className="flex flex-wrap md:flex-row justify-center items-center gap-2 drop-shadow">
       {technologies.map((tech, index) => (
-        <div key={index} className="flex flex-col justify-center">
-          <img 
-            src={tech.pic} 
-            alt={tech.name} 
-            className={`w-12 md:w-16 h-auto
-              ${tech.name === "express" || tech.name === "Node.js" || tech.name === "MySQL" ? "w-16 md:w-20" : ""} 
-              ${tech.name === "Cypress" || tech.name === "Postman"  ? "w-20 md:w-24" : ""}
-              ${tech.name === "Git" || tech.name === "Github"  ? "w-12 md:w-14" : ""}`}
+        <div key={index} className="flex flex-col justify-start items-center">
+          <img
+            src={tech.pic}
+            alt={tech.name}
+            className={`
+              ${tech.name === "express" || tech.name === "Node.js" || tech.name === "MySQL"
+                ? "w-16 h-16 md:w-20 md:h-20 mx-2"
+                : tech.name === "Cypress" || tech.name === "Postman"
+                ? "w-20 h-20 md:w-24 md:h-24 lg:w-20 lg:h-20 mx-2"
+                : tech.name === "Git" || tech.name === "Github"
+                ? "w-12 h-12 md:w-14 md:h-14 lg:w-12 lg:h-12 mx-2"
+                : tech.name === "JavaScript" || tech.name === "HTML" || tech.name === "CSS" || tech.name === "Tailwind"
+                ? "w-10 h-10"
+                : "w-10 h-10 md:w-14 md:h-14"  // Clases para las tecnologías no listadas
+              }
+            `}
           />
-          {(tech.name === "Tailwind" || tech.name === "Git" || tech.name === "Github")&& (
-            <h3 className="flex justify-center text-sm">{tech.name}</h3>
+          {(tech.name === "Tailwind" || tech.name === "Git" || tech.name === "Github") && (
+            <h3 className="text-sm text-center">{tech.name}</h3>
           )}
         </div>
       ))}
@@ -40,8 +47,8 @@ const TechCategory = ({ title, technologies }) => (
   </div>
 );
 
-const Tech = () => {
 
+const Tech = () => {
   const { t } = useTranslation();
 
   const backend = [
@@ -71,13 +78,13 @@ const Tech = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-5 px-2 md:px-5 h-full">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-5 px-2 md:px-16 h-full drop-shadow bg-gre">
       <TechCategory title="Frontend" technologies={frontend} />
       <TechCategory title="Backend" technologies={backend} />
       <TechCategory title="Framework" technologies={framework} />
-      <TechCategory title={t('database')} technologies={database} />
-      <TechCategory title={t('testing')} technologies={testing} />
-      <TechCategory title={t('versionsControl')} technologies={versionControl} />
+      <TechCategory title={t("database")} technologies={database} />
+      <TechCategory title={t("testing")} technologies={testing} />
+      <TechCategory title={t("versionsControl")} technologies={versionControl} />
     </div>
   );
 };

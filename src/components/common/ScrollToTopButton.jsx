@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
+import { LuArrowBigUpDash } from "react-icons/lu";
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,12 +37,12 @@ const ScrollToTopButton = () => {
   return (
     <button
       onClick={handleClick}
-      className={`fixed bottom-16 right-2 p-3 bg-light-txt/30 text-white rounded-full w-11 h-11 shadow-lg hover:bg-light-txt/70 focusBtn lg:hidden transition-opacity duration-300 ${
+      className={`fixed bottom-16 right-2 p-[10px] bg-light-txt/80 dark:bg-dark-txt/80 text-white dark:text-dark-background rounded-full w-11 h-11 shadow-lg hover:bg-light-txt/70 dark:hover:bg-dark-primary hover:text-white focusBtn lg:hidden transition-opacity duration-300 font-extrabold text-2xl ${
         isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
-      }`}
-      style={{ zIndex: 100 }}
+      } justify-center items-center`}
+      style={{ zIndex: 100, strokeWidth:"3",}}
     >
-      ↑
+      <LuArrowBigUpDash/>
     </button>
   );
 };

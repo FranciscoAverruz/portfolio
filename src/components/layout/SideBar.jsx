@@ -8,16 +8,20 @@ const SideBar = () => {
   return (
     <section className="flex flex-col sm:flex-row lg:flex-col justify-center md:justify-start lg:justify-center md:pl-5 lg:pl-0 items-center w-full">
       <div>
-        <div className="flex items-center md:items-start lg:items-center  flex-col gap-0 ">
+        <div className="flex items-center md:items-start lg:items-center flex-col gap-0 ">
           <div className="flex flex-row">
-            <h1>{t("greeting")}</h1>
-            <span>👋,</span>
+            <h1 className="text-light-subtitle dark:text-dark-subtitle">{t("greeting")}</h1>
+            <span>👋,</span><span className="ml-2 text-light-subtitle dark:text-dark-subtitle">{t("IAm")}</span>
           </div>
-          <div className="flex flex-col md:flex-row lg:flex-col items-center md:gap-4 lg:gap-0">
-            <span>{t("IAm")}</span>
-            <span className="text-xl text-light-txt dark:text-white font-bold py-2">Francisco Averruz</span>
+          <div className="flex items-center">
+            <span 
+              className="text-3xl font-semibold dark:font-normal text-light-txt text-light-title dark:text-dark-title my-5 md:my-auto lg:my-5" 
+              style={{ fontFamily: 'Satisfy, cursive' }}
+            >
+              Francisco Averruz
+            </span>
           </div>
-          <p className="text-center md:text-left lg:text-center lg:px-10">
+          <p className="paragraph text-center md:text-left lg:text-center lg:px-10">
             {t("profession")}
           </p>
         </div>

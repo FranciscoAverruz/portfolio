@@ -10,7 +10,7 @@ const variants = {
   exit: { opacity: 0, x: 30 },
 };
 
-const transition = { duration: 0.5 };
+const transition = { duration: 0.3 };
 
 const AnimationOpacity = (ComponentToAnimate) => {
   return (props) => (

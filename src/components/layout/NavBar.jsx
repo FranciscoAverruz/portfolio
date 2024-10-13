@@ -51,8 +51,8 @@ const NavBar = ({ darkLangButton, socialButton }) => {
   };
 
   return (
-    <nav className="flex h-14 lg:h-12 justify-center items-center relative drop-shadow-sm">
-      <ul className="flex flex-row gap-4 md:gap-16 lg:gap-20 z-50">
+    <nav className="text-light-subtitle dark:text-dark-subtitle flex h-14 lg:h-12 justify-center items-center relative drop-shadow-sm">
+      <ul className="flex flex-row gap-4 md:gap-16 lg:gap-20 z-50 md:z-30">
         {LinksMain.map((item) => (
           <li
             key={item.name}
@@ -64,9 +64,10 @@ const NavBar = ({ darkLangButton, socialButton }) => {
               to={item.link}
               className={`flex flex-col w-full md:flex-row gap-0 md:gap-3 text-sm font-medium items-center lg:items-start ${
                 isActiveLink(item.link)
-                  ? "text-amber-500 dark:text-link"
-                  : "text-light-txt hover:text-amber-500 dark:text-dark-txt dark:hover:text-link "
-              } focus:outline-none focus:text-amber-500 dark:focus:text-link`}
+              ? "text-light-active dark:text-dark-active"
+              : "text-light-subtitle dark:text-dark-subtitle hover:text-light-active dark:hover:text-dark-active focus:text-active"
+          } focus:outline-none focus:text-active dark:focus:text-active`
+            }
             >
               <div
                 className={`flex text-2xl justify-center  ${

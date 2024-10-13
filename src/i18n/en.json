@@ -12,6 +12,10 @@
   "experienceNav": "Experience", 
   "contactNav": "Contact",
 
+  "curriculum": "Resume",
+  "viewCV": "View resume",
+  "downloadCV": "Download resume",
+
   "database":"Database",
   "testing":"Testing",
   "versionsControl":"Versions Control"

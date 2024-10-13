@@ -7,7 +7,7 @@ const Contact = () => {
 
   return (
     <div>
-    <h1 className='h1'>{t('contactNav')}</h1>
+    <h1 className='title'>{t('contactNav')}</h1>
       <p>{t('')}</p>
       <p className='mb-5'>{t('')}</p>
       <p>{t('')}</p>

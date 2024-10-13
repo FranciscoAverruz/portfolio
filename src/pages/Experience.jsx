@@ -7,7 +7,7 @@ const Experience = () => {
 
   return (
     <div>
-    <h1 className='h1'>{t('experienceNav')}</h1>
+    <h1 className='title'>{t('experienceNav')}</h1>
       <p>{t('')}</p>
       <p className='mb-5'>{t('')}</p>
       <p>{t('')}</p>

@@ -7,7 +7,7 @@ const Projects = () => {
 
   return (
     <div>
-      <h1 className='h1'>{t('projectsNav')}</h1>
+      <h1 className='title'>{t('projectsNav')}</h1>
         <p>{t('')}</p>
         <p className='mb-5'>{t('')}</p>
         <p>{t('')}</p>

@@ -8,11 +8,11 @@ const About = () => {
 
   return (
     <div>
-      <h1 className='h1'>{t('aboutNav')}</h1>
-        <p>{t('aText.aT1')}</p>
-        <p className='mb-5'>{t('aText.aT2')}</p>
+      <h1 className='title'>{t('aboutNav')}</h1>
+        <p className='paragraph'>{t('aText.aT1')}</p>
+        <p className='mb-5 paragraph'>{t('aText.aT2')}</p>
         <Tech />
-        <p>{t('aText.aT3')}</p>
+        <p className='paragraph'>{t('aText.aT3')}</p>
     </div>
   )
 }
