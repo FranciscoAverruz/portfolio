@@ -47,7 +47,7 @@ const MainPage = () => {
 
   return (
     <div
-      className="flex justify-center w-screen h-screen  text-light-txt dark:text-dark-txt bg-cover bg-center bg-no-repeat backdrop-blur"
+      className="flex justify-center w-screen h-[95vh] text-light-txt dark:text-dark-txt bg-cover bg-center bg-no-repeat backdrop-blur"
       style={{
         backgroundImage:
           'url("https://images.pexels.com/photos/18419510/pexels-photo-18419510/free-photo-of-ligero-noche-espacio-oscuro.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")', // Cambia esto a la ruta de tu imagen
@@ -95,8 +95,8 @@ const MainPage = () => {
           </div>
         </aside>
 
-        <header className="fixed layout md:relative lg:top-auto bottom-0 left-0 w-screen md:col-span-1 md:row-span-1 md:row-start-2 md:col-start-1 md:w-full md:h-auto lg:row-start-1 lg:col-start-1 lg:col-span-4 z-50 md:z-30">
-          <div className="w-full h-full px-4 md:px-6 rounded-none lg:rounded-tr-xl lg:rounded-tl-xl">
+        <header className="fixed md:relative lg:top-auto bottom-0 left-0 w-screen md:col-span-1 md:row-span-1 md:row-start-2 md:col-start-1 md:w-full md:h-auto lg:row-start-1 lg:col-start-1 lg:col-span-4 z-50 md:z-30">
+          <div className="layout w-full h-full px-4 md:px-6 rounded-none lg:rounded-tr-xl lg:rounded-tl-xl">
             <NavBar
               socialButton={
                 <div className="hidden lg:block">
