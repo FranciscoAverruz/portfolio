@@ -47,14 +47,14 @@ const MainPage = () => {
 
   return (
     <div
-      className="flex justify-center w-screen h-[95vh] text-light-txt dark:text-dark-txt bg-cover bg-center bg-no-repeat backdrop-blur"
+      className="flex justify-center w-screen h-[calc(100vh-48px)] md:h-screen text-light-txt dark:text-dark-txt bg-cover bg-center bg-no-repeat backdrop-blur"
       style={{
         backgroundImage:
           'url("https://images.pexels.com/photos/18419510/pexels-photo-18419510/free-photo-of-ligero-noche-espacio-oscuro.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")', // Cambia esto a la ruta de tu imagen
       }}
     >
        <div
-    className="absolute inset-0 bg-light-background/40 dark:bg-dark-background/50 backdrop-blur-md" // Aplica el blur y ajusta los colores
+    className="absolute inset-0 bg-light-background/40 dark:bg-dark-background/50 backdrop-blur-md h-screen" // Aplica el blur y ajusta los colores
   ></div>
         <div
         className={`overflow-auto relative grid grid-cols-1 w-full lg:grid-cols-4 lg:grid-rows-[auto_1fr] md:grid-rows-[auto_auto_1fr] gap-1 md:h-screen p-3 ${
