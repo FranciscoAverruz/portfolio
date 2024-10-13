@@ -47,7 +47,7 @@ const MainPage = () => {
 
   return (
     <div
-      className="flex justify-center w-screen h-screen text-light-txt dark:text-dark-txt bg-cover bg-center bg-no-repeat backdrop-blur overflow-anchor-none"
+      className="flex justify-center w-screen h-screen text-light-txt dark:text-dark-txt bg-cover bg-center bg-no-repeat backdrop-blur"
       style={{
         backgroundImage:
           'url("https://images.pexels.com/photos/18419510/pexels-photo-18419510/free-photo-of-ligero-noche-espacio-oscuro.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")', // Cambia esto a la ruta de tu imagen
