@@ -45,5 +45,11 @@
     "sentSuccessfully": "Your message has been sent successfully!",
     "notSent": "Error sending the message. Please try again.",
     "invalidFields": "Hay campos inválidos. Por favor, corrija los errores."
+  },
+
+  "projects":{
+    "pTitle": "Projects Under Construction!",
+    "pFuture": "You'll be able to see them here soon!",
+    "pContact": "Contact Me"
   }
 }

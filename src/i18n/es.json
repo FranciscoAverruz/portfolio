@@ -43,5 +43,11 @@
     "invalidPhone": "Número de teléfono no válido.",
     "sentSuccessfully": "¡Su mensaje ha sido enviado con éxito!",
     "notSent": "Error al enviar el mensaje. Intente nuevamente."
+  },
+
+  "projects":{
+    "pTitle": "¡Proyectos en Construcción!",
+    "pFuture": "¡Muy pronto podrás verlos aquí!",
+    "pContact": "Contáctame"
   }
 }
