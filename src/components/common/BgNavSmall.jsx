@@ -3,13 +3,14 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import VisibilityOnScroll from "@hooks/VisibilityOnScroll";
 
-const FAverruzHeader = () => {
+const BgNavSmall = () => {
   const location = useLocation();
-  const name = "Francisco Averruz";
+
   const isRouteAllowed =
     location.pathname !== "/" &&
     location.pathname !== "/about" &&
     location.pathname !== "/contact";
+
   const isVisible = VisibilityOnScroll(
     isRouteAllowed
       ? {
@@ -19,27 +20,24 @@ const FAverruzHeader = () => {
         }
       : {
           lg: 0,
-          md: 200,
-          sm: 200,
+          md: 30,
+          sm: 50,
         }
   );
 
   return (
     <div>
       <div
-        className={`top-0 transition-opacity duration-300  items-center justify-center text-lg md:text-2xl text-light-title dark:text-dark-title ${
+        className={`flex fixed top-0 left-0 w-full h-12 z-30 lg:hidden items-center justify-center ${
           isVisible ||
           (isRouteAllowed && window.innerWidth <= 768) ||
           (isRouteAllowed && window.innerWidth > 1024)
-            ? "opacity-100"
-            : "opacity-0"
-        } `}
-        style={{ fontFamily: "Satisfy, cursive" }}
-      >
-        {name}
-      </div>
+            ? "bg-white/70 dark:bg-dark-secondary/60 backdrop-blur-lg transition-all ease-in-out duration-300 shadow-md"
+            : ""
+        }`}
+      ></div>
     </div>
   );
 };
 
-export default FAverruzHeader;
+export default BgNavSmall;

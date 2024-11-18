@@ -1,23 +1,49 @@
 {
-  "greeting" : "Hello",
-  "IAm":"I am",
-  "profession" : "Information systems engineer and full stack developer",
-  "aText":{
-      "aT1" : "During my academic career, I acquired a solid foundation in computer science and a practical approach to software development.",
-      "aT2" : "My passion for technology has led me to explore various languages and tools, training myself in technologies such as:",
-      "aT3" : "My goal is to continue learning and have opportunities that challenge me and allow me to grow as a developer, providing innovative solutions to current technological problems."
-      },
-  "aboutNav": "About me", 
-  "projectsNav": "Projects", 
-  "experienceNav": "Experience", 
+  "greeting": "Hello",
+  "IAm": "I am",
+  "profession": "Information systems engineer and full stack developer",
+  "aText": {
+    "aT1": "I am a Systems Engineer and Full Stack Developer with a ",
+    "aT2": "Master’s Certification in Full Stack Development. ",
+    "aT3": "I specialize in user-oriented software development, with experience in collaborative projects using agile methodologies ",
+    "aT4": ", where I have strengthened my skills in technical documentation, data analysis, and problem-solving. My passion for technology drives me to contribute innovative solutions that bring value and enhance user experience.",
+    "aT5": "I Currently work with technologies such as:"
+  },
+
+  "aboutNav": "About me",
+  "projectsNav": "Projects",
+  "experienceNav": "Experience",
   "contactNav": "Contact",
 
   "curriculum": "Resume",
   "viewCV": "View resume",
   "downloadCV": "Download resume",
 
-  "database":"Database",
-  "testing":"Testing",
-  "versionsControl":"Versions Control"
+  "database": "Database",
+  "testing": "Testing",
+  "versionsControl": "Versions Control",
+  "libraries": "Libraries",
 
+  "ContactBtnLabel": "Contact me through:",
+  "xtraContactLabel": "Want to know more?",
+  "CVBtnLabel": "Access my CV",
+  "contactFormLabel": "I'm just a message away!",
+
+  "name": "Name",
+  "phone": "Phone",
+  "email": "Email",
+
+  "send": "Send",
+
+  "portGithub": "Portfolio Repository",
+
+  "message": {
+    "msg": "Message",
+    "requiredField": "This field is required.",
+    "invalidEmail": "Invalid email address.",
+    "invalidPhone": "Invalid phone number.",
+    "sentSuccessfully": "Your message has been sent successfully!",
+    "notSent": "Error sending the message. Please try again.",
+    "invalidFields": "Hay campos inválidos. Por favor, corrija los errores."
+  }
 }

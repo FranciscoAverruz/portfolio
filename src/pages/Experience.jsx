@@ -6,7 +6,7 @@ const Experience = () => {
   const { t } = useTranslation();
 
   return (
-    <div>
+    <div className='h-screen'>
     <h1 className='title'>{t('experienceNav')}</h1>
       <p>{t('')}</p>
       <p className='mb-5'>{t('')}</p>

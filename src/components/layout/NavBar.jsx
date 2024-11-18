@@ -5,8 +5,6 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import {
-  PiBriefcaseDuotone,
-  PiBriefcaseFill,
   PiFolderOpenDuotone,
   PiFolderOpenFill,
 } from "react-icons/pi";
@@ -18,7 +16,6 @@ const NavBar = ({ darkLangButton, socialButton }) => {
   const location = useLocation();
   const [hoveredLink, setHoveredLink] = useState(null);
 
-  // Define the main navigation links
   const LinksMain = [
     {
       name: "aboutNav",
@@ -30,11 +27,11 @@ const NavBar = ({ darkLangButton, socialButton }) => {
       link: "/projects",
       icons: { default: <PiFolderOpenDuotone />, active: <PiFolderOpenFill /> },
     },
-    {
-      name: "experienceNav",
-      link: "/experience",
-      icons: { default: <PiBriefcaseDuotone />, active: <PiBriefcaseFill /> },
-    },
+    // {
+    //   name: "experienceNav",
+    //   link: "/experience",
+    //   icons: { default: <PiBriefcaseDuotone />, active: <PiBriefcaseFill /> },
+    // },
     {
       name: "contactNav",
       link: "/contact",
@@ -42,7 +39,6 @@ const NavBar = ({ darkLangButton, socialButton }) => {
     },
   ];
 
-  // Determine if the current path should activate a link
   const isActiveLink = (path) => {
     if (path === "/about" && (location.pathname === "/" || location.pathname === "/about")) {
       return true;
@@ -52,7 +48,7 @@ const NavBar = ({ darkLangButton, socialButton }) => {
 
   return (
     <nav className="text-light-subtitle dark:text-dark-subtitle flex h-14 lg:h-12 justify-center items-center relative drop-shadow-sm">
-      <ul className="flex flex-row gap-4 md:gap-16 lg:gap-20 z-50 md:z-30">
+      <ul className="flex flex-row gap-4 md:gap-16 lg:gap-20 z-50 md:z-30 tracking-wide">
         {LinksMain.map((item) => (
           <li
             key={item.name}

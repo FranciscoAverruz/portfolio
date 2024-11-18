@@ -1,18 +1,15 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import { useTranslation } from "react-i18next";
+import ProjectCard from '@sections/ProjectCard';
 
 const Projects = () => {
-  const { t } = useTranslation();
 
   return (
-    <div>
-      <h1 className='title'>{t('projectsNav')}</h1>
-        <p>{t('')}</p>
-        <p className='mb-5'>{t('')}</p>
-        <p>{t('')}</p>
+    <div className="p-0 mt-10 md:mt-5 lg:w-[70vw]">
+      <ProjectCard />
     </div>
-  )
+  );
 }
 
 export default Projects

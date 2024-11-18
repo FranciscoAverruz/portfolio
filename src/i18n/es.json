@@ -1,22 +1,47 @@
 {
-  "greeting" : "Hola",
-  "IAm":"Soy",
-  "profession" : "Ingeniero en sistemas de información y desarrollador full stack",
-  "aText":{
-      "aT1" : "Durante mi trayectoria académica, adquirí una sólida base en ciencias de la computación y un enfoque práctico en el desarrollo de software.",
-      "aT2" : "Mi pasión por la tecnología me ha llevado a explorar diversos lenguajes y herramientas, capacitándome en tecnologías como:",
-      "aT3" : "Mi objetivo es seguir aprendiendo y tener oportunidades que me reten y me permitan crecer como desarrollador, aportando soluciones innovadoras a problemas tecnológicos actuales."
-      },
-  "aboutNav": "Sobre mí", 
-  "projectsNav": "Proyectos", 
-  "experienceNav": "Experiencia", 
+  "greeting": "Hola",
+  "IAm": "Soy",
+  "profession": "Ingeniero en sistemas de información y desarrollador full stack",
+  "aText": {
+    "aT1": "Soy Ingeniero en Sistemas y Desarrollador Full Stack con una ",
+    "aT2": "Certificación de Máster en Full Stack Development. ",
+    "aT3": "Me especializo en el desarrollo de software orientado al usuario, con experiencia en proyectos colaborativos aplicando metodologías ágiles ",
+    "aT4": ", donde he fortalecido mis habilidades en documentación técnica, análisis de datos y resolución de problemas. Mi pasión por la tecnología me impulsa a contribuir con soluciones innovadoras que aporten valor y mejoren la experiencia de usuario.",
+    "aT5": "Actualmente trabajo con tecnologías como:"
+  },
+  "aboutNav": "Sobre mí",
+  "projectsNav": "Proyectos",
+  "experienceNav": "Experiencia",
   "contactNav": "Contacto",
 
   "curriculum": "Curriculum",
   "viewCV": "Ver curriculum",
   "downloadCV": "Descargar curriculum",
 
-  "database":"Base de Datos",
-  "testing":"Pruebas",
-  "versionsControl":"Control de Versiones"
+  "database": "Base de Datos",
+  "testing": "Pruebas",
+  "versionsControl": "Control de Versiones",
+  "libraries": "Librerías",
+
+  "ContactBtnLabel": "Contáctame a través de:",
+  "xtraContactLabel": "¿Quieres saber más?",
+  "CVBtnLabel": "Accede a mi CV",
+  "contactFormLabel": "¡Estoy a un mensaje de distancia!",
+
+  "name": "Nombre",
+  "phone": "Teléfono",
+  "email": "Correo",
+
+  "send": "Enviar",
+
+  "portGithub": "Repositorio del portafolio",
+
+  "message": {
+    "msg": "Mensaje",
+    "requiredField": "Este campo es obligatorio",
+    "invalidEmail": "Correo electrónico no válido.",
+    "invalidPhone": "Número de teléfono no válido.",
+    "sentSuccessfully": "¡Su mensaje ha sido enviado con éxito!",
+    "notSent": "Error al enviar el mensaje. Intente nuevamente."
+  }
 }

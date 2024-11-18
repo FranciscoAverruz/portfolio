@@ -2,7 +2,15 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 
-const ContactButton = ({ children, className, Icon, to, onClick, style, title }) => {
+const ContactButton = ({
+  children,
+  className,
+  Icon,
+  to,
+  onClick,
+  style,
+  title,
+}) => {
   const handleClick = () => {
     if (to) {
       window.open(to, "_blank", "noopener,noreferrer");

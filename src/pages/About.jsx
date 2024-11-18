@@ -1,18 +1,23 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import { useTranslation } from "react-i18next";
-import Tech from '../components/sections/Tech';
+import Tech from '@layout/Tech';
 
 const About = () => {
   const { t } = useTranslation();
 
   return (
-    <div>
-      <h1 className='title'>{t('aboutNav')}</h1>
-        <p className='paragraph'>{t('aText.aT1')}</p>
-        <p className='mb-5 paragraph'>{t('aText.aT2')}</p>
-        <Tech />
-        <p className='paragraph'>{t('aText.aT3')}</p>
+    <div className='mt-10'>
+        <p className='paragraph'>{t('aText.aT1')}
+          <strong>{t('aText.aT2')}</strong>
+          {t('aText.aT3')}
+          <strong>(SCRUM)</strong>
+          {t('aText.aT4')}
+        </p>
+        <p className='my-5 paragraph'>{t('aText.aT5')}</p>
+        <div className='w-full'>
+          <Tech />
+        </div>
     </div>
   )
 }

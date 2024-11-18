@@ -1,8 +1,17 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import React, { useState } from "react";
+/* eslint-disable no-unused-vars */
+import React from "react";
 
-const Social = ({ children, className, Icon, to, onClick, style, size, title }) => {
+const Social = ({
+  children,
+  className,
+  Icon,
+  to,
+  onClick,
+  style,
+  size,
+  title,
+}) => {
   const handleClick = () => {
     if (to) {
       window.open(to, "_blank", "noopener,noreferrer");
@@ -14,17 +23,23 @@ const Social = ({ children, className, Icon, to, onClick, style, size, title }) 
   return (
     <button
       onClick={handleClick}
-      className={`${className} bg-white text-light-generalText hover:border hover:text-active hover:border-light-accent hover:bg-light-secondary  p-3 flex w-8 h-8 justify-center items-center text-sm focus:outline-none rounded-full shadow-md dark:btnCV focusBtn`}
-      style={{ position: 'relative' }}
+      className={`group ${className} bg-transparent text-light-generalText focus:outline-none flex items-center hover:text-light-active dark:hover:text-dark-active`}
+      style={{ position: "relative" }}
       tabIndex="0"
       title={title}
     >
-      <span>{children}</span>
-      {Icon && (
-        <div className="flex-shrink-0">
-          <Icon style={style} size={size} className="flex text-lg hover:font-extrabold justify-center" />
-        </div>
-      )}
+      <div className="flex items-center">
+        {Icon && (
+          <div className="rounded-full flex justify-center items-center w-8 h-8 bg-white group-hover:border group-hover:bg-light-secondary group-hover:text-active group-hover:border-light-accent transition-colors">
+            <Icon style={style} size={size} className="text-lg" />
+          </div>
+        )}
+        {children && (
+          <span className="ml-3 text-gray-700 group-hover:text-active transition-colors underline-animation text-sm md:text-auto">
+            {children}
+          </span>
+        )}
+      </div>
     </button>
   );
 };

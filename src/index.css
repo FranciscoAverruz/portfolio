@@ -14,26 +14,125 @@
   }
 
   .btnStyle {
-    @apply  min-h-[40px] rounded-xl text-base px-2 lg:py-1 sm:px-2 md:px-4 shadow-md bg-light-accent dark:bg-dark-accent text-white transition ease-in-out duration-300 hover:bg-light-primary dark:hover:bg-dark-secondary hover:text-light-active hover:dark:text-dark-active hover:focus:outline
-    ;
+    @apply text-base text-white hover:text-light-active hover:dark:text-dark-active tracking-wider
+    min-h-[40px] rounded-xl px-2 lg:py-1 sm:px-2 md:px-4 drop-shadow-lg 
+    bg-light-accent  hover:bg-light-primary  hover:focus:outline dark:bg-dark-accent dark:hover:bg-dark-secondary
+    transition ease-in-out duration-300 font-semibold;
+  }
+
+  .btnSecondary {
+    @apply text-base text-light-title dark:text-light-primary hover:text-light-background dark:hover:text-dark-active tracking-wider
+    min-h-[40px] rounded-xl  px-4 py-2 shadow-md
+    bg-light-secondary dark:bg-dark-background hover:bg-light-subtitle 
+     transition ease-in-out duration-300 focus:outline-none;
+  }
+
+  .btnDemo{
+    @apply w-full rounded-lg hover:bg-light-primary dark:hover:bg-dark-primary p-1 transition ease-in-out duration-300
+  }
+
+  .errorMsg {
+    @apply absolute -bottom-4 right-0 self-end text-xs text-red-600 block;
+  }
+
+  .labelInput {
+    @apply block text-sm font-medium text-light-generalText dark:text-dark-generalText mb-1
+  }
+
+  .inputStyle {
+    @apply text-light-generalText dark:text-dark-generalText text-sm
+    rounded-lg w-full h-10 p-2 shadow-sm
+    border border-gray-300 dark:border-gray-600 
+    focus:ring-blue-500 dark:focus:ring-blue-500 focus:ring focus:ring-opacity-50
+    bg-gray-50 dark:bg-gray-700     
+    block;
   }
 
   .btnCV {
     @apply flex w-8 h-8 bg-light-background rounded-full hover:bg-light-secondary hover:text-light-active dark:hover:text-dark-active justify-center items-center shadow;
   }
+
   .iconBtnCV {
-    @apply text-xl text-light-generalText w-6 h-6 hover:text-light-active dark:hover:text-dark-active;
+    @apply text-xl text-light-generalText hover:text-light-active dark:hover:text-dark-active w-6 h-6;
+  }
+
+  .titlePages {
+    @apply absolute top-4 left-5
   }
   .title {
-    @apply text-2xl font-bold text-light-title dark:text-dark-title mb-5;
+    @apply text-2xl text-light-title dark:text-dark-title font-bold;
   }
+
   .subtitle {
-    @apply text-lg font-semibold text-light-subtitle dark:text-dark-subtitle mb-5;
+    @apply text-lg text-light-subtitle dark:text-dark-subtitle tracking-wide font-semibold;
   }
-  .paragraph{
+  .paragraph {
     @apply text-light-paragraph dark:text-dark-paragraph;
   }
+
   .focusBtn {
     @apply focus:outline-none focus:ring-2 focus:ring-light-generalText focus:ring-opacity-50 dark:focus:ring-dark-secondary dark:focus:ring-opacity-100;
   }
+ 
+  .innerlight {
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.4);
+  }
+  .innerdark {
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.8);
+  }
+
+  .techFx {
+    @apply group-hover:scale-125 ease-in-out duration-100 cursor-pointer;
+  }
+
+  .iconFooter {
+    @apply text-base border-r-2 border-r-light-secondary dark:border-r-dark-secondary w-7 mr-1
+  }
+
+/* ========================== UNDERLINE ANIMATION ========================== */
+.footerGitHub  {
+  align-items: center;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 8px;
+}
+
+.underline-animate {
+  /* opacity: 0.6; */
+  position: relative;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.underline-animate::after {
+  bottom: 0;
+  content: '';
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.underline-animate::after {
+  background-color: #0e6655;
+}
+
+@media (prefers-color-scheme: dark) {
+  .underline-animate::after {
+    background-color: #2c3e50;
+  }
+}
+
+.footerGitHub:hover .underline-animate {
+  opacity: 1;
+}
+
+.footerGitHub:hover .underline-animate::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 }

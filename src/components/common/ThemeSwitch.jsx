@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
-import "../../App.css";
+import "@src/App.css";
 
 const ThemeSwitch = () => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -13,7 +13,6 @@ const ThemeSwitch = () => {
     const newMode = !isDarkMode ? "dark" : "light";
     setIsDarkMode(!isDarkMode);
     localStorage.setItem("theme", newMode);
-    // Emitir un evento cuando cambia el tema
     window.dispatchEvent(new CustomEvent('themeChange', { detail: newMode }));
   };
 
@@ -23,7 +22,7 @@ const ThemeSwitch = () => {
 
   return (
     <div className="flex items-center justify-center">
-      {/* Toggle para pantallas grandes (lg) */}
+      {/* Toggle gor (lg)-screens  ******************************************************************** */}
       <label htmlFor="toggle" className="hidden lg:flex items-center cursor-pointer">
         <input
           type="checkbox"
@@ -47,7 +46,7 @@ const ThemeSwitch = () => {
         </div>
       </label>
 
-      {/* Botón para pantallas pequeñas (menores a lg) */}
+      {/* Toggle for smaller screens  ******************************************************************* */}
       <button
         className={`lg:hidden flex items-center justify-center w-14 h-8 rounded-full shadow-md cursor-pointer transition-colors duration-300 ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}
         onClick={handleToggle}

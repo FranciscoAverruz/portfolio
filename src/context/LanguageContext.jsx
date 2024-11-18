@@ -9,8 +9,6 @@ export const LanguageProvider = ({ children }) => {
   const { i18n } = useTranslation();
   const [language, setLanguage] = useState(i18n.language);
 
-  console.log(language)
-
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
     setLanguage(lng);

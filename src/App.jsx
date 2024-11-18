@@ -1,14 +1,15 @@
 import {Route, Routes} from 'react-router-dom'
-import MainPage from './pages/MainPage.jsx'
-import About from './pages/About.jsx'
-import Projects from './pages/Projects.jsx'
-import Experience from './pages/Experience.jsx'
-import Contact from './pages/Contact.jsx'
+import MainPage from '@pages/MainPage.jsx'
+import About from '@pages/About.jsx'
+import Projects from '@pages/Projects.jsx'
+import Experience from '@pages/Experience.jsx'
+import Contact from '@pages/Contact.jsx'
 
 
 function App() {
 
   return (
+
     <div>
       <Routes>
         <Route path='/' element={<MainPage />}>
@@ -20,6 +21,7 @@ function App() {
         </Route>
       </Routes>
     </div>
+
   )
 }
 
