@@ -23,4 +23,7 @@ export default defineConfig({
       '@src': path.resolve(__dirname, 'src/'),
     },
   },
+  build: {
+    outDir: 'dist',  // Asegura que el directorio de salida sea "dist"
+  },
 })

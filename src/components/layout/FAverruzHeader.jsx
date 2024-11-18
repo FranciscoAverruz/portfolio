@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import VisibilityOnScroll from "@hooks/VisibilityOnScroll";
+import VisibilityOnScroll from "@hooks/visibilityOnScroll.jsx";
 
 const FAverruzHeader = () => {
   const location = useLocation();
