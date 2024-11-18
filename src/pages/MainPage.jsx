@@ -4,7 +4,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import SideBar from "@layout/SideBar.jsx";
 import NavBar from "@layout/NavBar.jsx";
 import ThLang from "@layout/ThLang.jsx";
-import AnimationPages from "@utils/AnimationPages";
+import AnimationPages from "@utils/AnimationPages.jsx";
 import MainContactBtn from "@sections/MainContactBtn.jsx";
 import ScrollToTopButton from "@common/ScrollToTopButton.jsx";
 import Avatar from "@common/Avatar.jsx";

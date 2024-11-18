@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import Tech from "@layout/Tech";
+import Tech from "@layout/Tech.jsx";
 import { LuGithub } from "react-icons/lu";
 import { useTranslation } from "react-i18next";
 import { IoIosAt } from "react-icons/io";

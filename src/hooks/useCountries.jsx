@@ -1,6 +1,6 @@
 import { useEffect, useState, useContext } from "react";
 import axios from "axios";
-import LanguageContext from "@context/LanguageContext";
+import LanguageContext from "@context/LanguageContext.jsx";
 
 const languageMap = {
   en: "eng",

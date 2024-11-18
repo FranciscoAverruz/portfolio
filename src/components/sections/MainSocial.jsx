@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import Social from "@layout/Social";
+import Social from "@layout/Social.jsx";
 import { FaLinkedinIn } from "react-icons/fa";
 import { LuGithub } from "react-icons/lu";
 import { RiDownloadCloud2Line } from "react-icons/ri";
 import { useTranslation } from "react-i18next";
-import VisibilityOnScroll from "@hooks/VisibilityOnScroll";
+import VisibilityOnScroll from "@hooks/visibilityOnScroll.jsx";
 
 const MainSocial = () => {
   const location = useLocation(); 

@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 import { useTechnologies } from "@hooks/useTechnologies";
 import reactLight from "@imgTech/reactLight.svg";
 import reactDark from "@imgTech/reactDark.svg"; 
-import TechCategory from '@common/TechCategory';
+import TechCategory from '@common/TechCategory.jsx';
 
 const Tech = () => {
   const { t, frontend, backend, framework, libraries, database, testing, versionControl, allTechnologies } = useTechnologies();

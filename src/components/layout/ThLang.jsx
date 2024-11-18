@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import ThemeSwitch from '@common/ThemeSwitch'
-import LanguageSwitcher from '@common/LanguageSwitcher'
+import ThemeSwitch from '@common/ThemeSwitch.jsx'
+import LanguageSwitcher from '@common/LanguageSwitcher.jsx'
 
 const ThLang = () => {
   return (

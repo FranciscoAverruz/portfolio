@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import ContactButton from "@common/ContactButton";
+import ContactButton from "@common/ContactButton.jsx";
 import { FaLinkedinIn } from "react-icons/fa";
 import { LuGithub } from "react-icons/lu";
 import { FaRegEye, FaEye } from "react-icons/fa";

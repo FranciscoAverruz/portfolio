@@ -6,8 +6,8 @@ import { IoIosPerson, IoIosPhonePortrait, IoIosAt } from "react-icons/io";
 import { parsePhoneNumberFromString } from "libphonenumber-js";
 import useCountries from "@hooks/useCountries.jsx";
 import InputField from "@common/InputField.jsx";
-import ImageWithLoader from "@common/ImageWithLoader";
-import { FormDataContext } from "@context/FormDataContext";
+import ImageWithLoader from "@common/ImageWithLoader.jsx";
+import { FormDataContext } from "@context/FormDataContext.jsx";
 
 const EmailForm = ({ onSubmit }) => {
   const { t, i18n } = useTranslation();

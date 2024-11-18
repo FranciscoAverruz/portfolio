@@ -2,10 +2,10 @@
 import { Menu, MenuButton } from "@headlessui/react";
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import NavBar from "@layout/NavBar";
+import NavBar from "@layout/NavBar.jsx";
 import { useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
-import VisibilityOnScroll from "@hooks/VisibilityOnScroll";
+import VisibilityOnScroll from "@hooks/visibilityOnScroll.jsx";
 
 const itemVariants = {
   open: {
