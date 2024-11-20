@@ -1,14 +1,8 @@
-<div style="display: flex; justify-content: center; width: 100%;">
-  <strong style="font-size: 200%">Francisco Averruz Castellón</strong>
-</div>
-<div style="display: flex; justify-content: center; width: 100%;">
-  <p><span style="font-size: 160%">Portfolio</span> (Frontend)</p>
-</div>
-<br>
-<div style="display: flex; justify-content: center; width: 100%;">
+# Francisco Averruz Castellón
+## Portfolio(Frontend)
+
   <img src="/src/assets/images/readmePics/bannerReadme.png" style="max-width: 100%; height: auto;" alt="Banner readme" width="900"><br>
-</div>
-<br>
+
 
 This repository contains the frontend for my personal portfolio. It is built using **React** and styled with **TailwindCSS**. It includes multiple sections like **About**, **Projects**, and **Contact**, where users can interact with the portfolio and submit inquiries.
 
@@ -97,7 +91,7 @@ To get started with the frontend, follow these steps:
          npm start
          ```
 
-         The server will be available at http://localhost:5000 or the URL you have configured.
+         The server will be available at [http://localhost:5000](http://localhost:5000) or the URL you have configured.
 
 
    - ***Install Frontend Dependencies:***
@@ -113,7 +107,7 @@ To get started with the frontend, follow these steps:
          ```bash
          npm run dev
          ```
-         This will start the development server at http://localhost:5173 (or on the port configured in your .env file).
+         This will start the development server at [http://localhost:5173](http://localhost:5173) or on the port configured in your `.env` file.
 
 ## Technologies Used
 ___
@@ -153,74 +147,46 @@ The language selector, is found in the top-right corner. Users can select betwee
 3. **Viewing Projects** (Under Construction)
 The Projects section is currently under construction. Once completed, this section will feature interactive project cards where users can click on each card to view more details about each project.
 
-   <div style="display: flex; flex-direction: Row; gap: 20px;">
-   <div style="margin-bottom: 10px; display: flex; flex-direction: column;">
-         <strong> Projects Section on Desktop:</strong>
+   **Projects Section on Desktop**:
          <img src="/src/assets/images/readmePics/projectsDesktop.png" alt="Desktop project section" width="800"/>
 
-   </div>
-   <div style="margin-bottom: 10px; display: flex; flex-direction: column;">
-         <strong>Projects Section on Mobile:</strong>
+   **Projects Section on Mobile**:
          <img src="/src/assets/images/readmePics/projectsMobile.png" alt="Mobile project section" width="189"/>
-   </div>
-   </div>
 
 4. **Download CV**
 The Download CV button is located within the About Me section. Its size and position adjust based on screen type to remain accessible.
 
-   <div style="display: flex; flex-direction: Row; gap: 20px;">
-   <div style="margin-bottom: 10px; display: flex; flex-direction: column;">
-         <strong> CV Download Button on Desktop:</strong>
+   **CV Download Button on Desktop**:
          <img src="/src/assets/images/readmePics/cvDownloadDesktop.png" alt="Desktop CV download" width="300"/><br>
 
-   </div>
-   <div style="margin-bottom: 10px; display: flex; flex-direction: column;">
-         <strong>CV Download Button on Mobile:</strong>
+   **CV Download Button on Mobile**:
          <img src="/src/assets/images/readmePics/cvDownloadMobile.png" alt="Mobile CV download" width="300"/><br>
-   </div>
-   </div>
+
 
 5. **Contact Form**
 The Contact form, accessible from the Contact section, includes input fields and a submit button that resize for an optimized mobile or desktop experience.
 
-   <div style="display: flex; flex-direction: Row; gap: 20px;">
-   <div style="margin-bottom: 10px; display: flex; flex-direction: column;">
-         <strong>Contact Form on Desktop:</strong>
+   **Contact Form on Desktop**:
          <img src="/src/assets/images/readmePics/contactDesktop.png" alt="Desktop contact form" width="800"/>
 
-   </div>
-   <div style="margin-bottom: 10px; display: flex; flex-direction: column;">
-         <strong>Contact Form on Mobile:</strong>
+   **Contact Form on Mobile**:
          <img src="/src/assets/images/readmePics/contactMobile.png" alt="Mobile contact form" width="189"/>
-   </div>
-   </div>
+
 
 6. **Light/Dark Mode**
 This portfolio supports Light and Dark modes, which allows users to switch between light and dark themes for a more personalized experience. The theme can be toggled by clicking on the Theme Switch button, usually located in the top-right corner of the header or in the mobile menu.
 
-   <div style="display: flex; flex-direction: Row; gap: 20px;">
-   <div style="margin-bottom: 10px; display: flex; flex-direction: column;">
-         <strong>Light Mode on Desktop:</strong>
+   **Light Mode on Desktop**:
          <img src="/src/assets/images/readmePics/lightModeDesktop.png" alt="Desktop light mode" width="800"/>
 
-   </div>
-   <div style="margin-bottom: 10px; display: flex; flex-direction: column;">
-         <strong>Light Mode on Mobile:</strong>
-         <img src="/src/assets/images/readmePics/lightModeMobile.png" alt="Mobile light mode" width="189"/>
-   </div>
-   </div>
-
-   <div style="display: flex; flex-direction: Row; gap: 20px;">
-   <div style="margin-bottom: 10px; display: flex; flex-direction: column;">
-         <strong>Dark Mode on Desktop:</strong>
+   **Dark Mode on Desktop**:
          <img src="/src/assets/images/readmePics/darkModeDesktop.png" alt="Desktop dark mode" width="800"/>
 
-   </div>
-   <div style="margin-bottom: 10px; display: flex; flex-direction: column;">
-         <strong>Dark Mode on Mobile:</strong>
+   **Light Mode on Mobile**:
+         <img src="/src/assets/images/readmePics/lightModeMobile.png" alt="Mobile light mode" width="189"/>
+
+   **Dark Mode on Mobile**:
          <img src="/src/assets/images/readmePics/darkModeMobile.png" alt="Mobile dark mode" width="189"/>
-   </div>
-   </div>
 
 
 Once toggled, the theme will persist across sessions, using localStorage to remember the user's preference.
