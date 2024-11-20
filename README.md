@@ -7,16 +7,12 @@
 This repository contains the frontend for my personal portfolio. It is built using **React** and styled with **TailwindCSS**. It includes multiple sections like **About**, **Projects**, and **Contact**, where users can interact with the portfolio and submit inquiries.
 
 ## Requirements
-___
-
 Before running the frontend, make sure the backend server is running as it handles the contact form submissions.
 
 For detailed instructions on how to set up and run the backend, please refer to the [Backend README](https://github.com/FranciscoAverruz/portfolioEmailServer).
 
 ## Project Structure 
-___
-
-Here’s a breakdown of the folder structure of the frontend project:
+Here is a breakdown of the folder structure of the frontend project:
 ```bash
 ├── dist               # The output folder containing the production build  
 ├── src                # Source code of the frontend
@@ -42,8 +38,6 @@ Here’s a breakdown of the folder structure of the frontend project:
 └── .gitignore         # Git ignore file
 ```
 ## Environment Variables (.env Configuration)
-___
-
 The frontend requires the following environment variables for API connections, assets, and external links. Make sure to add these to a .env file in the project’s root directory:
 
 ```bash
@@ -68,8 +62,6 @@ The frontend requires the following environment variables for API connections, a
 - For the avatar and CV URLs, Dropbox can be a convenient hosting option. If using Dropbox, ensure that the share link ends with **`?raw=1`** instead of **`?dl=0`** to make the files load directly in the portfolio.
 
 ## Getting Started
-___
-
 To get started with the frontend, follow these steps:
 
 1. ### Clone the repository
@@ -110,8 +102,6 @@ To get started with the frontend, follow these steps:
          This will start the development server at [http://localhost:5173](http://localhost:5173) or on the port configured in your `.env` file.
 
 ## Technologies Used
-___
-
 - **React**: `JavaScript` library for building user interfaces.
 - **TailwindCSS**: Utility-first `CSS` framework
 - **Vite**: Build tool for fast development and bundling.
@@ -121,7 +111,6 @@ ___
 - **dotenv**: A zero-dependency module to load environment variables from a `.env` file.
 
 ## Usage
-___
 The portfolio is designed to be fully responsive, offering an optimal experience on both desktop and mobile devices. The layout and button accessibility adjust based on screen size for a seamless user experience.
 
 1. **Navigation**
