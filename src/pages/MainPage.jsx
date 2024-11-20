@@ -29,9 +29,6 @@ const MainPage = () => {
   const { t } = useTranslation();
   const [translation, setTranslation] = useState("");
 
-  console.log("isAboutPage ==== ", t("aboutNav"))
-  console.log("isAboutPage ==== ", isAboutPage)
-
   useEffect(() => {
     const handleThemeChange = (e) => {
       const newTheme = e.detail;

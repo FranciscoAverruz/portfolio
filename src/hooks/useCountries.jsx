@@ -25,7 +25,6 @@ const useCountries = () => {
       try {
         const response = await axios.get(urlApi);
         setResponseData(response.data);
-        console.log("response == ", response);
 
         const apiLanguage = languageMap[language] || "eng";
 

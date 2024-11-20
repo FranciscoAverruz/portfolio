@@ -16,7 +16,7 @@ const Tech = () => {
   return (
     <div className={`px-0 mb-5 md:mb-0 ${isContactPage ? 'grid-cols-1 px-0' : 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 md:gap-1'}`}>
       {isContactPage ? (
-        // Renderiza una sola fila con todas las tecnologías
+        // Render a single row with all the technologies
         <section className="flex flex-row flex-wrap gap-[2px] md:gap-1 justify-center">
           {allTechnologies.map((tech, index) => (
             <div
@@ -41,7 +41,7 @@ const Tech = () => {
           ))}
         </section>
       ) : (
-        // Renderiza la estructura completa por categorías
+        // Render the complete structure by categories
         <>
           <TechCategory title="Frontend" technologies={frontend} />
           <TechCategory title="Backend" technologies={backend} />

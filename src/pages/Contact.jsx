@@ -19,7 +19,6 @@ const Contact = () => {
         import.meta.env.VITE_API_URL,
         formData
       );
-      console.log("Correo enviado", response.data);
     } catch (error) {
       console.error("Error sending the message", error);
       throw new Error("Error sending the message"); 

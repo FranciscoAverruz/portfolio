@@ -59,8 +59,6 @@ const NavBarMenu = () => {
       }
   );
 
-
-
   return (
     <Menu
       as="div"
