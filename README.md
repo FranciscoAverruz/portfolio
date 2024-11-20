@@ -1,7 +1,7 @@
-# Francisco Averruz Castellón
-## Portfolio(Frontend)
+# Francisco Javier Averruz Castellón
+**Portfolio(Frontend)**
 
-  <img src="/src/assets/images/readmePics/bannerReadme.png" style="max-width: 100%; height: auto;" alt="Banner readme" width="900"><br>
+  <img src="/src/assets/images/readmePics/bannerReadme.png" alt="Banner readme" width="900"><br>
 
 
 This repository contains the frontend for my personal portfolio. It is built using **React** and styled with **TailwindCSS**. It includes multiple sections like **About**, **Projects**, and **Contact**, where users can interact with the portfolio and submit inquiries.
@@ -116,65 +116,65 @@ The portfolio is designed to be fully responsive, offering an optimal experience
 1. **Navigation**
 On desktop screens, the navigation menu allows quick access to sections like About Me, Projects, and Contact at the top. On mobile devices, the navigation menu is fixed at the bottom of the screen for easy access.
 
-   **Desktop Navigation:**
+   **Desktop Navigation:**<br>
       <img src="/src/assets/images/readmePics/top_NavBar.png" alt="Desktop Navigation" width="900"/><br>
 
-   **Mobile Navigation** (Fixed at the bottom):
+   **Mobile Navigation** (Fixed at the bottom):<br>
       <img src="/src/assets/images/readmePics/bottom_NavBar.png" alt="Mobile Navigation" width="300"/><br>
 
 
 2. **Language Selection**
 The language selector, is found in the top-right corner. Users can select between English, Spanish, and Portuguese.
 
-   **Desktop Language Selector:**
+   **Desktop Language Selector:**<br>
       <img src="/src/assets/images/readmePics/desktopLanNav.png" alt="Desktop Language selector" width="900"/><br>
 
-   **Mobile Language Selector:**
+   **Mobile Language Selector:**<br>
       <img src="/src/assets/images/readmePics/languageMobile.png" alt="Mobile Language selector" width="300"/><br>
 
 
 3. **Viewing Projects** (Under Construction)
 The Projects section is currently under construction. Once completed, this section will feature interactive project cards where users can click on each card to view more details about each project.
 
-   **Projects Section on Desktop**:
+   **Projects Section on Desktop**:<br>
          <img src="/src/assets/images/readmePics/projectsDesktop.png" alt="Desktop project section" width="800"/>
 
-   **Projects Section on Mobile**:
+   **Projects Section on Mobile**:<br>
          <img src="/src/assets/images/readmePics/projectsMobile.png" alt="Mobile project section" width="189"/>
 
 4. **Download CV**
 The Download CV button is located within the About Me section. Its size and position adjust based on screen type to remain accessible.
 
-   **CV Download Button on Desktop**:
+   **CV Download Button on Desktop**:<br>
          <img src="/src/assets/images/readmePics/cvDownloadDesktop.png" alt="Desktop CV download" width="300"/><br>
 
-   **CV Download Button on Mobile**:
+   **CV Download Button on Mobile**:<br>
          <img src="/src/assets/images/readmePics/cvDownloadMobile.png" alt="Mobile CV download" width="300"/><br>
 
 
 5. **Contact Form**
 The Contact form, accessible from the Contact section, includes input fields and a submit button that resize for an optimized mobile or desktop experience.
 
-   **Contact Form on Desktop**:
+   **Contact Form on Desktop**:<br>
          <img src="/src/assets/images/readmePics/contactDesktop.png" alt="Desktop contact form" width="800"/>
 
-   **Contact Form on Mobile**:
+   **Contact Form on Mobile**:<br>
          <img src="/src/assets/images/readmePics/contactMobile.png" alt="Mobile contact form" width="189"/>
 
 
 6. **Light/Dark Mode**
 This portfolio supports Light and Dark modes, which allows users to switch between light and dark themes for a more personalized experience. The theme can be toggled by clicking on the Theme Switch button, usually located in the top-right corner of the header or in the mobile menu.
 
-   **Light Mode on Desktop**:
+   **Light Mode on Desktop**:<br>
          <img src="/src/assets/images/readmePics/lightModeDesktop.png" alt="Desktop light mode" width="800"/>
 
-   **Dark Mode on Desktop**:
+   **Dark Mode on Desktop**:<br>
          <img src="/src/assets/images/readmePics/darkModeDesktop.png" alt="Desktop dark mode" width="800"/>
 
-   **Light Mode on Mobile**:
+   **Light Mode on Mobile**:<br>
          <img src="/src/assets/images/readmePics/lightModeMobile.png" alt="Mobile light mode" width="189"/>
 
-   **Dark Mode on Mobile**:
+   **Dark Mode on Mobile**:<br>
          <img src="/src/assets/images/readmePics/darkModeMobile.png" alt="Mobile dark mode" width="189"/>
 
 
