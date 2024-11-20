@@ -36,7 +36,7 @@ const ThemeSwitch = () => {
         />
         <div className="relative">
           <div className={`block ${isDarkMode ? 'bg-gray-800' : 'bg-white'} w-14 h-8 rounded-full shadow-md transition-colors duration-300`}></div>
-          <div className={`dot absolute left-1 top-1 bg-amber-400 w-6 h-6 rounded-full flex items-center justify-center text-white font-bold shadow-inner transition-transform duration-300 ${isDarkMode ? "translate-x-full" : ""}`}>
+          <div className={`dot absolute left-1 top-1 bg-amber-400 w-6 h-6 rounded-full flex items-center justify-center text-white font-bold shadow-inner transition-transform duration-100 ${isDarkMode ? "translate-x-full" : ""}`}>
             {isDarkMode ? (
               <MdLightMode className="drop-shadow-lg" />
             ) : (

@@ -3,6 +3,7 @@ import React from 'react'
 import { useTranslation } from "react-i18next";
 import { Link } from 'react-router-dom';
 // import ProjectCard from '@sections/ProjectCard.jsx';
+import ImageWithLoader from "@common/ImageWithLoader";
 
 const Projects = () => {
   const { t } = useTranslation();
@@ -18,7 +19,7 @@ const Projects = () => {
         {t("projects.pFuture")}
       </p>
       <div className="w-52 h-52 overflow-hidden rounded-full shadow-lg mb-6">
-        <img
+        <ImageWithLoader
           src={
             'https://images.pexels.com/photos/5749149/pexels-photo-5749149.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
           }

@@ -17,8 +17,7 @@ import { useTranslation } from "react-i18next";
 
 const MainPage = () => {
   const location = useLocation();
-  const isAboutPage =
-    location.pathname === "/about" || location.pathname === "/";
+  const isAboutPage = location.pathname === "/about" || location.pathname === "/";
   const isProjectsPage = location.pathname === "/projects";
   const isContactPage = location.pathname === "/contact";
   const bgImg =
@@ -28,6 +27,10 @@ const MainPage = () => {
   const AnimatedOutlet = AnimationPages(Outlet);
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const { t } = useTranslation();
+  const [translation, setTranslation] = useState("");
+
+  console.log("isAboutPage ==== ", t("aboutNav"))
+  console.log("isAboutPage ==== ", isAboutPage)
 
   useEffect(() => {
     const handleThemeChange = (e) => {
@@ -49,6 +52,10 @@ const MainPage = () => {
       scrollableContainer.scrollTo(0, 0);
     }
   }, [location.pathname, isAboutPage]);
+
+  useEffect(() => {
+    setTranslation(t("aboutNav"));
+  }, [t]);
 
   return (
     <div
@@ -141,13 +148,13 @@ const MainPage = () => {
           } lg:overflow-y-auto`}
         >
           {isAboutPage ? (
-            <h1 className="title titlePages">{t("aboutNav")}</h1>
+            // <h1 className="title titlePages">{t("aboutNav")}</h1>
+            <h1 className="title titlePages">{translation}</h1>
           ) : isProjectsPage ? (
             <h1 className="title titlePages">{t("projectsNav")}</h1>
           ) : (
             <h1 className="title titlePages">{t("contactNav")}</h1>
           )}
-
           <div className="relative h-full px-4 md:px-6 lg:px-10 py-5 z-10 md:flex md:items-center md:justify-center lg:items-start">
             <AnimatedOutlet />
           </div>
