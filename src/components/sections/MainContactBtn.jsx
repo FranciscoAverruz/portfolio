@@ -14,9 +14,12 @@ const MainContactBtn = () => {
   const { t } = useTranslation();
   const location = useLocation();
   const isContactPage = location.pathname === "/contact";
+  const cvUrl = import.meta.env.VITE_CV_URL;
+  const linkedIn = import.meta.env.VITE_LINKEDIN_URL;
+  const gitHub = import.meta.env.VITE_GITHUB_URL;
 
   const handleViewCV = () => {
-    window.open("/CV Francisco.Averruz.pdf", "_blank");
+    window.open(cvUrl, "_blank");
   };
 
   return (
@@ -51,23 +54,23 @@ const MainContactBtn = () => {
             {/* Linkedin button ******************************************************/}
             <ContactButton
               Icon={FaLinkedinIn}
-              to="https://www.linkedin.com/in/franciscoaverruz"
+              to={linkedIn}
               className={`${
                 isContactPage ? "lg:gap-5 md:w-[9rem] lg:w-[10rem]" : ""
               } w-full justify-center md:justify-between`}
-              title="https://www.linkedin.com/in/franciscoaverruz"
+              title={linkedIn}
             > LinkedIn </ContactButton>
 
             {/* GitHub button ******************************************************/}
             <ContactButton
               Icon={LuGithub}
               isCV={false}
-              to="https://github.com/FranciscoAverruz"
+              to={gitHub}
               className={`${
                 isContactPage ? "lg:gap-5 md:w-[9rem] lg:w-[10rem]" : ""
               } w-full justify-center md:justify-between`}
               style={{ strokeWidth: "3" }}
-              title="https://github.com/FranciscoAverruz"
+              title={gitHub}
             > GitHub </ContactButton>
           </div>
         </div>
@@ -102,8 +105,8 @@ const MainContactBtn = () => {
                 )}
               </button>
               <a
-                href="/CV Francisco.Averruz.pdf"
-                download="CV Francisco.Averruz.pdf"
+                href={cvUrl}
+                download={cvUrl}
                 onMouseEnter={() => setIsHoveringDownloadCV(true)}
                 onMouseLeave={() => setIsHoveringDownloadCV(false)}
                 className="btnCV focusBtn"

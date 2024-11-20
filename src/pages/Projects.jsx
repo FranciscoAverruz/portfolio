@@ -2,7 +2,7 @@
 import React from 'react'
 import { useTranslation } from "react-i18next";
 import { Link } from 'react-router-dom';
-import ProjectCard from '@sections/ProjectCard.jsx';
+// import ProjectCard from '@sections/ProjectCard.jsx';
 
 const Projects = () => {
   const { t } = useTranslation();
