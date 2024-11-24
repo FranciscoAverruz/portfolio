@@ -25,7 +25,7 @@ const ThemeSwitch = () => {
   return (
     <div className="flex items-center justify-center">
       {/* Toggle gor (lg)-screens  ******************************************************************** */}
-      <label htmlFor="toggle" className="hidden lg:flex items-center cursor-pointer">
+      <label htmlFor="toggle-dark" className="hidden lg:flex items-center cursor-pointer">
         <input
           type="checkbox"
           id="toggle-dark"
