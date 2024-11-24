@@ -51,5 +51,19 @@
     "pTitle": "Projects Under Construction!",
     "pFuture": "You'll be able to see them here soon!",
     "pContact": "Contact Me"
+  },
+
+  "srOnly":{
+    "tDark": "Switch to dark mode",
+    "tLight": "Switch to dark mode"
+  },
+
+  "langSwitcher": {
+    "currentLanguage": "Switch language, currently in {{language}}",
+    "changeLanguage": "Change to {{language}}",
+    "flagAlt": "{{language}} flag"
   }
 }
+
+
+

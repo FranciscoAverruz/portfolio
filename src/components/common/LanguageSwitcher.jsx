@@ -8,6 +8,7 @@ import usagb from "@imgLanguage/usagb.png";
 import React, { useContext, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import LanguageContext from "@context/LanguageContext";
+import { useTranslation } from "react-i18next";
 
 const itemVariants = {
   open: {
@@ -49,6 +50,7 @@ const LanguageSwitcher = () => {
   const { changeLanguage, currentLanguage } = useContext(LanguageContext);
   const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const savedLanguage = localStorage.getItem("language") || currentLanguage;
@@ -66,15 +68,17 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <Menu as="div" className="relative inline-block text-left">
+    <Menu as="div" className="relative inline-block text-left" role="menu">
       <div>
         <MenuButton
           onClick={() => setIsOpen(!isOpen)}
           className="flex bg-white dark:bg-[#5b5a5a] w-8 h-8 rounded-full shadow-md items-center justify-center hover:border hover:border-light-accent font-semibold text-xl"
+          aria-label={t('langSwitcher.changeLanguage', { language: selectedLanguage.name })}
         >
           <img
             src={selectedLanguage.icon}
-            alt={`${selectedLanguage.name} Flag`}
+            // alt={`${selectedLanguage.name} Flag`}
+            alt={t('langSwitcher.flagAlt', { language: selectedLanguage.name })}
             className="w-6 h-6"
           />
         </MenuButton>
@@ -99,6 +103,7 @@ const LanguageSwitcher = () => {
                 <button
                   onClick={() => handleLanguageChange(language)}
                   className="flex items-center w-full"
+                  alt={t('langSwitcher.flagAlt', { language: language.name })}
                 >
                   <img
                     src={language.icon}

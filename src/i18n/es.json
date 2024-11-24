@@ -49,5 +49,18 @@
     "pTitle": "¡Proyectos en Construcción!",
     "pFuture": "¡Muy pronto podrás verlos aquí!",
     "pContact": "Contáctame"
+  },
+
+  "srOnly":{
+    "tDark": "Cambiar a modo oscuro",
+    "tLight": "Cambiar a modo claro"
+  },
+
+  "langSwitcher": {
+    "currentLanguage": "Cambiar idioma, actualmente en {{language}}",
+    "changeLanguage": "Cambiar a {{language}}",
+    "flagAlt": "Bandera de {{language}}"
   }
 }
+
+

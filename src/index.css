@@ -89,6 +89,20 @@
     @apply text-base border-r-2 border-r-light-secondary dark:border-r-dark-secondary w-7 mr-1
   }
 
+  @font-face {
+    font-family: 'Satisfy';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/fonts/satisfy-regular-webfont.woff2') format('woff2'),
+         url('/fonts/satisfy-regular-webfont.woff') format('woff');
+}
+
+  .satisfy-font {
+    font-family: 'Satisfy', cursive;
+    font-style: normal;
+    font-weight: normal; 
+  }
+
 /* ========================== UNDERLINE ANIMATION ========================== */
 .footerGitHub  {
   align-items: center;

@@ -12,6 +12,7 @@ export default defineConfig({
       '@imgLanguage': path.resolve(__dirname, 'src/assets/images/languages'),
       '@imgTech': path.resolve(__dirname, 'src/assets/images/technologies'),
       '@assets': path.resolve(__dirname, 'src/assets'),
+      '@components': path.resolve(__dirname, 'src/components'),
       '@common': path.resolve(__dirname, 'src/components/common'),
       '@layout': path.resolve(__dirname, 'src/components/layout'),
       '@sections': path.resolve(__dirname, 'src/components/sections'),

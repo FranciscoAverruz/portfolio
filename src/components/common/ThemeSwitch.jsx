@@ -1,9 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
+import { useTranslation } from "react-i18next";
 import "@src/App.css";
 
 const ThemeSwitch = () => {
+  const { t } = useTranslation();
   const [isDarkMode, setIsDarkMode] = useState(() => {
     const savedTheme = localStorage.getItem("theme");
     return savedTheme ? savedTheme === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -26,7 +28,7 @@ const ThemeSwitch = () => {
       <label htmlFor="toggle" className="hidden lg:flex items-center cursor-pointer">
         <input
           type="checkbox"
-          id="toggle"
+          id="toggle-dark"
           className="sr-only"
           checked={isDarkMode}
           onChange={handleToggle}
@@ -44,6 +46,7 @@ const ThemeSwitch = () => {
             )}
           </div>
         </div>
+        <span className="sr-only">{isDarkMode ? t('srOnly.tLight') : t('srOnly.tDark')}</span>
       </label>
 
       {/* Toggle for smaller screens  ******************************************************************* */}
@@ -61,6 +64,7 @@ const ThemeSwitch = () => {
             <MdDarkMode className="drop-shadow-lg" />
           )}
         </div>
+        <span className="sr-only">{isDarkMode ? t('srOnly.tLight') : t('srOnly.tDark')}</span>
       </button>
     </div>
   );

@@ -27,14 +27,14 @@ const FAverruzHeader = () => {
   return (
     <div>
       <div
-        className={`top-0 transition-opacity duration-300  items-center justify-center text-lg md:text-2xl text-light-title dark:text-dark-title ${
+        className={`top-0 transition-opacity duration-300  items-center justify-center text-lg md:text-2xl text-light-title dark:text-dark-title satisfy-font ${
           isVisible ||
           (isRouteAllowed && window.innerWidth <= 768) ||
           (isRouteAllowed && window.innerWidth > 1024)
             ? "opacity-100"
             : "opacity-0"
         } `}
-        style={{ fontFamily: "Satisfy, cursive" }}
+        // style={{ fontFamily: "Satisfy, cursive" }}
       >
         {name}
       </div>

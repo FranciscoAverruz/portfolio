@@ -12,6 +12,8 @@ import postman from "@imgTech/postman.svg";
 import tailwind from "@imgTech/tailwindCSS.svg";
 import git from "@imgTech/git.svg";
 import gitHub from "@imgTech/gitHub.svg";
+import reactLight from "@imgTech/reactLight.svg";
+import reactDark from "@imgTech/reactDark.svg";
 
 export const useTechnologies = () => {
   const { t } = useTranslation();
@@ -44,7 +46,7 @@ export const useTechnologies = () => {
   ];
 
   const libraries = [
-    { name: "react", pic: "" },
+    { name: "react", pic: { light: reactLight, dark: reactDark } },  // Agregamos las versiones light y dark de React
   ];
 
   const allTechnologies = [

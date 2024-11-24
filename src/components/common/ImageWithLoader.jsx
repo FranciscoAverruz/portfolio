@@ -8,12 +8,13 @@ const ImageWithLoader = ({
   className,
   loaderClassName,
   imgClassName,
+  aspectRatio = "16/9",
   ...props
 }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div className={`relative ${className}`} {...props}>
+    <div className={`relative ${className}`} style={{ aspectRatio }} {...props}>
       {isLoading && (
         <div
           className={`absolute inset-0 flex items-center justify-center ${loaderClassName}`}
@@ -28,6 +29,8 @@ const ImageWithLoader = ({
         onLoad={() => setIsLoading(false)}
         onError={() => setIsLoading(false)}
         className={`w-full h-full object-cover ${imgClassName}`}
+        loading="eager" // Ensuring eager loading for faster image load
+        fetchPriority="high" // Prioritize this image load
       />
     </div>
   );

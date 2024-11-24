@@ -4,13 +4,13 @@ import About from '@pages/About.jsx'
 import Projects from '@pages/Projects.jsx'
 import Experience from '@pages/Experience.jsx'
 import Contact from '@pages/Contact.jsx'
-
+import GoogleAnalyticsScript from '@components/GoogleAnalyticsScript.jsx'
 
 function App() {
 
   return (
-
     <div>
+      <GoogleAnalyticsScript />
       <Routes>
         <Route path='/' element={<MainPage />}>
           <Route index element={<About />} />
@@ -21,7 +21,6 @@ function App() {
         </Route>
       </Routes>
     </div>
-
   )
 }
 
