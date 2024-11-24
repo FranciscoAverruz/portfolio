@@ -9,6 +9,7 @@ const ImageWithLoader = ({
   loaderClassName,
   imgClassName,
   aspectRatio = "16/9",
+  fetchPriority,
   ...props
 }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -29,8 +30,8 @@ const ImageWithLoader = ({
         onLoad={() => setIsLoading(false)}
         onError={() => setIsLoading(false)}
         className={`w-full h-full object-cover ${imgClassName}`}
-        loading="eager" // Ensuring eager loading for faster image load
-        fetchPriority="high" // Prioritize this image load
+        loading="eager"
+        fetchPriority={fetchPriority || "high"}
       />
     </div>
   );

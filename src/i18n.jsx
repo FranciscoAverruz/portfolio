@@ -12,10 +12,13 @@ i18n
       es: { translation: es },
       pt: { translation: pt }
     },
-    lng: 'es', 
+    lng: 'es',
     fallbackLng: 'es',
     interpolation: {
-      escapeValue: false
+      escapeValue: false,
+    },
+    react: {
+      useSuspense: true,
     }
   });
 

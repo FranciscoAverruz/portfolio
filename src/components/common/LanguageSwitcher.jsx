@@ -74,6 +74,8 @@ const LanguageSwitcher = () => {
           onClick={() => setIsOpen(!isOpen)}
           className="flex bg-white dark:bg-[#5b5a5a] w-8 h-8 rounded-full shadow-md items-center justify-center hover:border hover:border-light-accent font-semibold text-xl"
           aria-label={t('langSwitcher.changeLanguage', { language: selectedLanguage.name })}
+          aria-haspopup="true"
+          aria-expanded={isOpen ? "true" : "false"} 
         >
           <img
             src={selectedLanguage.icon}
@@ -98,6 +100,7 @@ const LanguageSwitcher = () => {
               <motion.li
                 key={language.code}
                 variants={itemVariants}
+                role="menuitem"
                 className="hover:bg-light-primary hover:text-light-accent dark:hover:bg-dark-neutral group flex w-full items-center rounded-md px-2 py-2 text-sm"
               >
                 <button

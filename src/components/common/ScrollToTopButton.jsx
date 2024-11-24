@@ -41,8 +41,9 @@ const ScrollToTopButton = () => {
         isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
       } justify-center items-center`}
       style={{ zIndex: 100, strokeWidth:"3",}}
+      aria-label="Scroll to top" 
     >
-      <LuArrowBigUpDash/>
+      <LuArrowBigUpDash aria-hidden="true"/>
     </button>
   );
 };

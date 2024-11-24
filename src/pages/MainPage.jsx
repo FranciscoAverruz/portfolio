@@ -103,8 +103,7 @@ const MainPage = () => {
             <span
               className={`${
                 isAboutPage ? "hidden" : "block"
-              } flex justify-end items-center h-full pr-20 text-4xl text-dark-title`}
-              style={{ fontFamily: "Satisfy, cursive" }}
+              } flex justify-end items-center h-full pr-20 text-4xl text-dark-title satisfy-font`}
             >
               Francisco Averruz
             </span>
