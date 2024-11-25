@@ -17,7 +17,7 @@ const About = () => {
         </p>
         <p className='my-5 paragraph'>{t('aText.aT5')}</p>
       <Suspense fallback={<div>Loading Tech...</div>}>
-        <div className='w-full hidden md:block'>
+        <div className='w-full md:block'>
           <Tech />
         </div>
       </Suspense>
