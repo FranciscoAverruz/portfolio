@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
@@ -9,7 +10,7 @@ const ImageWithLoader = ({
   loaderClassName,
   imgClassName,
   aspectRatio = "16/9",
-  fetchPriority,
+  fetchpriority,
   ...props
 }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -31,7 +32,7 @@ const ImageWithLoader = ({
         onError={() => setIsLoading(false)}
         className={`w-full h-full object-cover ${imgClassName}`}
         loading="eager"
-        fetchPriority={fetchPriority || "high"}
+        fetchpriority={fetchpriority || "high"}
       />
     </div>
   );
