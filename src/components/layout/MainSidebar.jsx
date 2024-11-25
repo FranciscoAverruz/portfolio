@@ -15,7 +15,7 @@ const MainSidebar = ({ isAboutPage, isContactPage, bgBanner }) => {
       <div
         className={`${
           !isAboutPage ? "md:h-[68%]" : "md:h-[50%]"
-        } absolute top-0 left-0 w-full h-[30%] md:h-[45%] lg:h-[20%] bg-cover bg-center rounded-tl-2xl rounded-tr-2xl lg:rounded-tl-none lg:rounded-tr-none`}
+        } absolute top-0 left-0 w-full h-[30%] md:h-[45%] lg:h-[20%] bg-[length:400px_130px] md:bg-[length:780px_160px] lg:bg-[length:400px_130px] bg-no-repeat bg-center rounded-tl-2xl rounded-tr-2xl lg:rounded-tl-none lg:rounded-tr-none`}
         style={{ backgroundImage: bgBanner }}
       >
         <span

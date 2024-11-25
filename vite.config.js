@@ -26,5 +26,10 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist', 
+    minify: 'esbuild',
+    assetsInlineLimit: 4096,
+    rollupOptions: {
+      treeshake: true, 
+  },
   },
 })

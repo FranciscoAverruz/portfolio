@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import { Menu, MenuButton } from "@headlessui/react";
-import es from "@imgLanguage/es.png";
-import pt from "@imgLanguage/pt.png";
-import usagb from "@imgLanguage/usagb.png";
+import es from "@imgLanguage/es.webp";
+import pt from "@imgLanguage/pt.webp";
+import usagb from "@imgLanguage/usagb.webp";
 
 import React, { useContext, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -75,11 +75,11 @@ const LanguageSwitcher = () => {
           className="flex bg-white dark:bg-[#5b5a5a] w-8 h-8 rounded-full shadow-md items-center justify-center hover:border hover:border-light-accent font-semibold text-xl"
           aria-label={t('langSwitcher.changeLanguage', { language: selectedLanguage.name })}
           aria-haspopup="true"
-          aria-expanded={isOpen ? "true" : "false"} 
+          aria-expanded={isOpen ? "true" : "false"}
+          id="menu-button"
         >
           <img
             src={selectedLanguage.icon}
-            // alt={`${selectedLanguage.name} Flag`}
             alt={t('langSwitcher.flagAlt', { language: selectedLanguage.name })}
             className="w-6 h-6"
           />
@@ -95,6 +95,8 @@ const LanguageSwitcher = () => {
             variants={listVariants}
             style={{ pointerEvents: isOpen ? "auto" : "none" }}
             className="absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-light-background dark:bg-dark-background dark:text-white shadow-md w-28"
+            role="menu"
+            aria-labelledby="menu-button"
           >
             {languages.map((language) => (
               <motion.li
@@ -105,12 +107,19 @@ const LanguageSwitcher = () => {
               >
                 <button
                   onClick={() => handleLanguageChange(language)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      handleLanguageChange(language);
+                    }
+                  }}
                   className="flex items-center w-full"
-                  alt={t('langSwitcher.flagAlt', { language: language.name })}
+                  tabIndex="0"
+                  aria-label={t('langSwitcher.flagAlt', { language: language.name })}
                 >
                   <img
                     src={language.icon}
-                    alt={`${language.name} Flag`}
+                    alt={t('langSwitcher.flagAlt', { language: language.name })}
                     className="rounded-full w-4 h-4 mr-2"
                   />
                   {language.name}

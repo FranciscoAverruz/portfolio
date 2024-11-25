@@ -7,16 +7,16 @@ import MainContent from "@layout/MainContent";
 import Footer from "@sections/Footer";
 import ScrollToTopButton from "@common/ScrollToTopButton.jsx";
 import { useTranslation } from "react-i18next";
+import MainSmallButtons from "@layout/MainSmallButtons.jsx";
+import bgImg from "@imgTech/bgImg.webp";
+import bgBanner from "@imgTech/bgBanner.webp";
+
 
 const MainPage = () => {
   const location = useLocation();
   const isAboutPage = location.pathname === "/about" || location.pathname === "/";
   const isProjectsPage = location.pathname === "/projects";
   const isContactPage = location.pathname === "/contact";
-  const bgImg =
-    "url('https://images.pexels.com/photos/18419510/pexels-photo-18419510/free-photo-of-ligero-noche-espacio-oscuro.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')";
-  const bgBanner =
-    "url('https://images.pexels.com/photos/18337644/pexels-photo-18337644/free-photo-of-ligero-creativo-espacio-oscuro.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')";
   const { t } = useTranslation();
   const [translation, setTranslation] = useState("");
 
@@ -26,8 +26,9 @@ const MainPage = () => {
 
   return (
     <div
-      className="flex justify-center w-screen h-screen text-light-txt dark:text-dark-txt bg-cover bg-center bg-no-repeat backdrop-blur"
-      style={{ backgroundImage: bgImg }}
+      className="flex justify-center w-screen h-screen text-light-txt dark:text-dark-txt md:bg-cover bg-center bg-no-repeat backdrop-blur 
+      bg-[length:400px_900px]"
+      style={{ backgroundImage:`url(${bgImg})`}}
     >
       <div className="absolute inset-0 bg-light-background/40 dark:bg-dark-background/40 backdrop-blur-md h-screen"></div>
       <div
@@ -44,7 +45,7 @@ const MainPage = () => {
         <MainSidebar
           isAboutPage={isAboutPage}
           isContactPage={isContactPage}
-          bgBanner={bgBanner}
+          bgBanner={`url(${bgBanner})`}
         />
         <MainContent
           isAboutPage={isAboutPage}
@@ -56,6 +57,7 @@ const MainPage = () => {
         {isContactPage && <Footer />}
         <ScrollToTopButton />
       </div>
+      <MainSmallButtons />
     </div>
   );
 };

@@ -30,7 +30,7 @@ const ImageWithLoader = ({
         alt={alt}
         onLoad={() => setIsLoading(false)}
         onError={() => setIsLoading(false)}
-        className={`w-full h-full object-cover ${imgClassName}`}
+        className={`object-cover ${imgClassName}`}
         loading="eager"
         fetchpriority={fetchpriority || "high"}
       />

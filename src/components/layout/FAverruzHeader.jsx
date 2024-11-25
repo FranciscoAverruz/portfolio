@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useLocation } from "react-router-dom";
 import VisibilityOnScroll from "@hooks/visibilityOnScroll.jsx";
 
@@ -34,7 +34,6 @@ const FAverruzHeader = () => {
             ? "opacity-100"
             : "opacity-0"
         } `}
-        // style={{ fontFamily: "Satisfy, cursive" }}
       >
         {name}
       </div>
