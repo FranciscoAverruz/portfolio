@@ -26,8 +26,7 @@ const MainPage = () => {
 
   return (
     <div
-      className="flex justify-center w-screen h-screen text-light-txt dark:text-dark-txt md:bg-cover bg-center bg-no-repeat backdrop-blur 
-      bg-[length:400px_900px]"
+      className="flex justify-center w-screen h-screen text-light-txt dark:text-dark-txt bg-cover bg-center bg-no-repeat backdrop-blur" 
       style={{ backgroundImage:`url(${bgImg})`}}
     >
       <div className="absolute inset-0 bg-light-background/40 dark:bg-dark-background/40 backdrop-blur-md h-screen"></div>
