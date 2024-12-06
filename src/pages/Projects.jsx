@@ -18,13 +18,13 @@ const Projects = () => {
       <p className="text-lg text-yellow-700 dark:text-yellow-300 font-semibold mb-6">
         {t("projects.pFuture")}
       </p>
-      <div className="w-52 h-52 overflow-hidden rounded-full shadow-lg mb-6">
+      <div className="w-52 h-52 overflow-hidden object-cover rounded-full shadow-lg mb-6 bg-green-300">
         <ImageWithLoader
           src={
             'https://images.pexels.com/photos/5749149/pexels-photo-5749149.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
           }
           alt="En construcción"
-          className="w-full h-full object-cover opacity-90"
+          className="h-44"
         />
       </div>
       <Link to="/contact">

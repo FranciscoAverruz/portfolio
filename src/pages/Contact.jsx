@@ -42,7 +42,7 @@ const Contact = () => {
 
         <div className="p-0 md:p-8 lg:p-6 xl:p-8 flex flex-col-reverse md:flex-col justify-center items-center w-full h-full col-span-3">
           <div className="w-full h-full">
-            <h2 className="flex subtitle mb-4 justify-start tracking-tight">{t('contactFormLabel')}</h2>
+            <h1 className="flex title mb-4 justify-start tracking-tight">{t('contactFormLabel')}</h1>
             <div className="w-full px-0 md:px-2">
             <EmailForm onSubmit={handleEmailSubmit}/>
             </div>
@@ -50,7 +50,7 @@ const Contact = () => {
           <div className="flex justify-center items-center w-full md:block mb-5 md:mb-0">
             <span className={`${
               isContactPage
-                ? "md:block w-full flex title mt-5 tracking-tight"
+                ? "md:block w-full flex title mt-4 tracking-tight"
                 : "lg:hidden"
             } hidden`}>
               {t("xtraContactLabel")}

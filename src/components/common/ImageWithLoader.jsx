@@ -19,7 +19,7 @@ const ImageWithLoader = ({
     <div className={`relative ${className}`} style={{ aspectRatio }} {...props}>
       {isLoading && (
         <div
-          className={`absolute inset-0 flex items-center justify-center ${loaderClassName}`}
+          className={`bg-red-300 absolute inset-0 flex items-center justify-center ${loaderClassName}`}
         >
           <div className="z-50 w-5 h-5 border-4 border-light-accent border-t-transparent rounded-full animate-spin"></div>
         </div>

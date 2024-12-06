@@ -28,7 +28,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <div className="flex items-center justify-center m-0 -mb-2 md:m-0 md:-mb-0"><Tech /></div>
+      <div className="hidden md:flex items-center justify-center m-0 -mb-2 md:m-0 md:-mb-0"><Tech /></div>
     </section>
     </footer>
   );
