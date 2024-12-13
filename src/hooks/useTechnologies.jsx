@@ -14,6 +14,8 @@ import git from "@imgTech/git.svg";
 import gitHub from "@imgTech/gitHub.svg";
 import reactLight from "@imgTech/reactLight.svg";
 import reactDark from "@imgTech/reactDark.svg";
+import jest from "@imgTech/jest.svg";
+import swagger from "@imgTech/swagger.svg";
 
 export const useTechnologies = () => {
   const { t } = useTranslation();
@@ -28,6 +30,7 @@ export const useTechnologies = () => {
   const framework = [
     { name: "express", pic: express },
     { name: "tailwind", pic: tailwind },
+    { name: "react", pic: { light: reactLight, dark: reactDark } },
   ];
 
   const database = [
@@ -38,6 +41,7 @@ export const useTechnologies = () => {
   const testing = [
     { name: "cypress", pic: cypress },
     { name: "postman", pic: postman },
+    { name: "Jest", pic: jest },
   ];
 
   const versionControl = [
@@ -46,7 +50,7 @@ export const useTechnologies = () => {
   ];
 
   const libraries = [
-    { name: "react", pic: { light: reactLight, dark: reactDark } },  // Agregamos las versiones light y dark de React
+    { name: "Swagger", pic: swagger },
   ];
 
   const allTechnologies = [
