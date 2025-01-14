@@ -94,7 +94,7 @@ const useCountries = () => {
         const defaultCountry = formattedOptions.find(
           (opt) => opt.code === dCountry
         );
-        if (defaultCountry) setSelectedPrefix(defaultCountry.prefix);
+        if (defaultCountry) setSelectedPrefix(`${defaultCountry.prefix} `)
       } catch (error) {
         console.error("Error fetching countries:", error);
       }
