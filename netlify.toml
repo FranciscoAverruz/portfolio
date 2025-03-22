@@ -7,7 +7,6 @@
   to = "https://short-x.onrender.com/:shortId"
   status = 200
   force = true
-  headers = {Host = ":host"}
 
 [[redirects]]
   from = "/*"
