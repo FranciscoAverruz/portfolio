@@ -19,7 +19,7 @@ const MainContactBtn = () => {
   const gitHub = import.meta.env.VITE_GITHUB_URL;
 
   const handleViewCV = () => {
-    window.open(cvUrl, "_blank");
+    window.open("/CV/esp_FranciscoAverruz.pdf", "_blank");
   };
 
   return (
@@ -105,8 +105,8 @@ const MainContactBtn = () => {
                 )}
               </button>
               <a
-                href={cvUrl}
-                download={cvUrl}
+                href="/CV/esp_FranciscoAverruz.pdf"
+                download="esp_FranciscoAverruz.pdf"
                 onMouseEnter={() => setIsHoveringDownloadCV(true)}
                 onMouseLeave={() => setIsHoveringDownloadCV(false)}
                 className="btnCV focusBtn"

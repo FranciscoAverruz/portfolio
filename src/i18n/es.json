@@ -31,6 +31,10 @@
   "name": "Nombre",
   "phone": "Teléfono",
   "email": "Correo",
+  "client" : "Cliente",
+  "server" : "Servidor",
+  "demo" : "Demo",
+  "details" : "Detalles",
 
   "send": "Enviar",
 
@@ -60,7 +64,24 @@
     "currentLanguage": "Cambiar idioma, actualmente en {{language}}",
     "changeLanguage": "Cambiar a {{language}}",
     "flagAlt": "Bandera de {{language}}"
+  },
+
+   "projectsInfo" : {
+    "description" : "Acortador de enlaces eficiente y seguro con análisis detallados y personalización.",
+    "technologies" : "Tecnologías",
+    "keyFeat" : "Características clave",
+    "projectfullDescription": "es una plataforma para crear enlaces cortos con estadísticas detalladas. Los usuarios pueden crear, personalizar y gestionar enlaces fácilmente a través de un panel de control intuitivo. Con el plan Pro, tienen acceso a estadísticas, como el total de clics clasificados por dispositivo. Además, las cuentas Premium permiten ver estadísticas por país y también utilizar dominios personalizados, brindando mayor flexibilidad y profesionalismo en el uso de los enlaces. Sin importar el plan, los usuarios disfrutan de una experiencia simple para optimizar y rastrear sus enlaces.",
+    "keyFeatures" : [
+      "Panel de control",
+        "API para la Gestión de Enlaces y Usuarios",
+        "Autenticación con JWT",
+        "Compresión de enlaces",
+        "Gestión y análisis de enlaces acortados",
+        "Gráficos dinámicos para métricas de uso",
+        "Pagos con Stripe",
+        "Optimización con Vite y compresión",
+        "Gestión de Suscripciones:",
+        "Funciones Pro y Premium"
+    ]
   }
 }
-
-

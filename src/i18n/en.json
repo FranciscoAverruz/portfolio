@@ -32,6 +32,10 @@
   "name": "Name",
   "phone": "Phone",
   "email": "Email",
+  "client": "Client",
+  "server": "Server",
+  "demo": "Demo",
+  "details": "Details",
 
   "send": "Send",
 
@@ -47,13 +51,13 @@
     "invalidFields": "Hay campos inválidos. Por favor, corrija los errores."
   },
 
-  "projects":{
+  "projects": {
     "pTitle": "Projects Under Construction!",
     "pFuture": "You'll be able to see them here soon!",
     "pContact": "Contact Me"
   },
 
-  "srOnly":{
+  "srOnly": {
     "tDark": "Switch to dark mode",
     "tLight": "Switch to dark mode"
   },
@@ -62,8 +66,23 @@
     "currentLanguage": "Switch language, currently in {{language}}",
     "changeLanguage": "Change to {{language}}",
     "flagAlt": "{{language}} flag"
+  },
+  "projectsInfo": {
+    "description": "Efficient and secure link shortener with detailed analytics and customization.",
+    "technologies": "Technologies",
+    "keyFeat": "Key Features",
+    "projectfullDescription": "is a platform to create short links with detailed statistics. Users can create, customize, and manage links easily through an intuitive dashboard. With the Pro plan, they have access to statistics such as the total number of clicks classified by device. Additionally, Premium accounts allow users to view statistics by country and use custom domains, providing greater flexibility and professionalism in link usage. Regardless of the plan, users enjoy a simple experience to optimize and track their links.",
+    "keyFeatures": [
+      "Dashboard",
+      "API for Link and User Management",
+      "JWT Authentication",
+      "Link Compression",
+      "Management and Analytics of Shortened Links",
+      "Dynamic Graphs for Usage Metrics",
+      "Payments with Stripe",
+      "Optimization with Vite and Compression",
+      "Subscription Management:",
+      "Pro and Premium Features"
+    ]
   }
 }
-
-
-

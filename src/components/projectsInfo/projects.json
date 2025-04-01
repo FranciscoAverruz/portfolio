@@ -1,0 +1,69 @@
+[
+  {
+    "name": "Your Smart Link Shortener",
+    "description": "projectsInfo.description",
+    "fullDescription": "projectsInfo.projectfullDescription",
+    "keyFeatures": "projectsInfo.keyFeatures",
+    "mainImage": "src/assets/images/shortx/mainImage.png",
+    "githubFrontEnd": "FranciscoAverruz/short-x_client",
+    "githubBackend": "FranciscoAverruz/short-x_server",
+    "liveLink": "https://st-x.netlify.app",
+    "thumbnails": [
+        "src/assets/images/shortx/thumbnails/thLightA.png",
+        "src/assets/images/shortx/thumbnails/thDarkA.png",
+        "src/assets/images/shortx/thumbnails/thLogin.png",
+        "src/assets/images/shortx/thumbnails/thRegister.png",
+        "src/assets/images/shortx/thumbnails/thLightPricing.png",
+        "src/assets/images/shortx/thumbnails/thDarkPricing.png",
+        "src/assets/images/shortx/thumbnails/thStripe.png",
+        "src/assets/images/shortx/thumbnails/thLightAccount.png",
+        "src/assets/images/shortx/thumbnails/thDarkAccount.png",
+        "src/assets/images/shortx/thumbnails/thLinks.png",
+        "src/assets/images/shortx/thumbnails/thProStats.png",
+        "src/assets/images/shortx/thumbnails/thSubscription.png",
+        "src/assets/images/shortx/thumbnails/thCustomDomainChecking.png",
+        "src/assets/images/shortx/thumbnails/thCustomDomains.png",
+        "src/assets/images/shortx/thumbnails/thPremiumStats.png"
+    ],
+    "gallery": [
+        "src/assets/images/shortx/gallery/lightA.png",
+        "src/assets/images/shortx/gallery/darkA.png",
+        "src/assets/images/shortx/gallery/login.png",
+        "src/assets/images/shortx/gallery/register.png",
+        "src/assets/images/shortx/gallery/lightPricing.png",
+        "src/assets/images/shortx/gallery/darkPricing.png",
+        "src/assets/images/shortx/gallery/stripe.png",
+        "src/assets/images/shortx/gallery/lightAccount.png",
+        "src/assets/images/shortx/gallery/darkAccount.png",
+        "src/assets/images/shortx/gallery/links.png",
+        "src/assets/images/shortx/gallery/proStats.png",
+        "src/assets/images/shortx/gallery/subscription.png",
+        "src/assets/images/shortx/gallery/customDomainChecking.png",
+        "src/assets/images/shortx/gallery/customDomains.png",
+        "src/assets/images/shortx/gallery/premiumStats.png"
+    ],
+    "mainTech": [
+      { "name": "React", "icon": "SiReact", "iconBg": "bg-tech-ReactjsDark", "nameBg": "bg-tech-Reactjs" },
+      { "name": "Node.js", "icon": "SiNodedotjs", "iconBg": "bg-tech-NodejsDark", "nameBg": "bg-tech-Nodejs" },
+      { "name": "Express.js", "icon": "SiExpress", "iconBg": "bg-tech-ExpressjsDark", "nameBg": "bg-tech-Expressjs", "textColor": "text-white" },
+      { "name": "MongoDB", "icon": "SiMongodb", "iconBg": "bg-tech-MongoDBDark", "nameBg": "bg-tech-MongoDB" },
+      { "name": "JWT", "icon": "SiJsonwebtokens", "iconBg": "bg-tech-JWTDark", "nameBg": "bg-tech-JSONWeb", "textColor": "text-white" },
+      { "name": "Tailwind CSS", "icon": "SiTailwindcss", "iconBg": "bg-tech-TailwindCSSDark", "nameBg": "bg-tech-TailwindCSS" },
+      { "name": "Stripe", "icon": "SiStripe", "iconBg": "bg-tech-StripeDark", "nameBg": "bg-tech-Stripe" }
+    ],
+    "addTech": [
+      { "name": "React Router", "icon": "SiReactrouter", "iconBg": "bg-tech-ReactRouterDark", "nameBg": "bg-tech-ReactRouter" },
+      { "name": "Framer Motion", "icon": "SiFramer", "iconBg": "bg-tech-FramerMotionDark", "nameBg": "bg-tech-FramerMotion" },
+      { "name": "Chart.js", "icon": "SiChartdotjs", "iconBg": "bg-tech-ChartjsDark", "nameBg": "bg-tech-Chartjs" },
+      { "name": "Axios", "icon": "SiJavascript", "iconBg": "bg-tech-AxiosDark", "nameBg": "bg-tech-Axios" },
+      { "name": "Vite", "icon": "SiVite", "iconBg": "bg-tech-ViteDark", "nameBg": "bg-tech-Vite" },
+      { "name": "Swagger", "icon": "SiSwagger", "iconBg": "bg-tech-SwaggerDark", "nameBg": "bg-tech-Swagger" },
+      { "name": "Libphonenumber-js", "icon": "SiNpm", "iconBg": "bg-tech-LibphonenumberjsDark", "nameBg": "bg-tech-Libphonenumberjs" },
+      { "name": "Jest", "icon": "SiJest", "iconBg": "bg-tech-JestDark", "nameBg": "bg-tech-Jest", "textColor": "text-white" },
+      { "name": "JWT", "icon": "SiJsonwebtokens", "iconBg": "bg-tech-JWTDark", "nameBg": "bg-tech-JSONWeb", "textColor": "text-white" },
+      { "name": "CORS", "icon": "SiCorsair", "iconBg": "bg-tech-CORS_Dark", "nameBg": "bg-tech-CORS" },
+      { "name": "Nodemailer", "icon": "MdEmail", "iconBg": "bg-tech-NodemailerDark", "nameBg": "bg-tech-Nodemailer", "textColor": "text-white" },
+      { "name": "Socket.IO", "icon": "SiSocketdotio", "iconBg": "bg-tech-SocketIODark", "nameBg": "bg-tech-SocketIO", "textColor": "text-white" }
+    ]
+  }
+]

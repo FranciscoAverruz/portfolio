@@ -11,7 +11,7 @@ import VisibilityOnScroll from "@hooks/visibilityOnScroll.jsx";
 const MainSocial = () => {
   const location = useLocation(); 
   const handleViewCV = () => {
-    window.open("/CV Francisco.Averruz.pdf", "_blank");
+    window.open("/CV/esp_FranciscoAverruz.pdf", "_blank");
   };
   const { t } = useTranslation();
 

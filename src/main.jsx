@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from "react-router-dom";
 import App from '@src/App.jsx'
 import '@src/index.css'
+import '@src/scroll.css'
 import '@src/i18n';
 import  { LanguageProvider }  from '@context/LanguageContext.jsx';
 import {FormDataProvider} from '@context/FormDataContext.jsx'

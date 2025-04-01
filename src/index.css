@@ -8,6 +8,10 @@
   }
 }
 
+.subTSingleProject{
+  @apply text-light-active dark:text-dark-active font-semibold
+}
+
 @layer components {
   .layout {
     @apply bg-white/70 dark:bg-dark-primary/70 backdrop-blur;
@@ -74,6 +78,10 @@
     @apply focus:outline-none focus:ring-2 focus:ring-light-generalText focus:ring-opacity-50 dark:focus:ring-dark-secondary dark:focus:ring-opacity-100;
   }
  
+  .bgProjectsDetail{
+    @apply bg-light-background dark:bg-[#202f3f] shadow-md hover:shadow-xl transition-shadow 
+  }
+
   .innerlight {
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.4);
   }
@@ -101,6 +109,19 @@
     font-family: 'Satisfy', cursive;
     font-style: normal;
     font-weight: normal; 
+  }
+
+  @font-face {
+    font-family: "Audiowide";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/fonts/audiowide-regular-webfont.woff2") format("woff2"),
+      url("/fonts/audiowide-regular-webfont.woff") format("woff");
+  }
+  .Audiowide-font {
+    font-family: "Audiowide", cursive;
+    font-style: normal;
+    font-weight: normal;
   }
 
 /* ========================== UNDERLINE ANIMATION ========================== */

@@ -1,143 +1,277 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useRef, useState } from "react";
+import { IoReturnUpBack } from "react-icons/io5";
+import { LuGithub } from "react-icons/lu";
+import { IoCheckbox } from "react-icons/io5";
+import { MdOutlineLaptopMac } from "react-icons/md";
+import { useTranslation } from "react-i18next";
 
 const ProjectModal = ({ project, closeModal }) => {
-  const galleryRef = useRef();
+  const { t } = useTranslation();
   const [selectedImage, setSelectedImage] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const galleryRef = useRef(null);
 
-  const handlePrev = () => {
-    galleryRef.current.scrollBy({ left: -200, behavior: "smooth" });
-  };
-
-  const handleNext = () => {
-    galleryRef.current.scrollBy({ left: 200, behavior: "smooth" });
-  };
-
-  const handleImageClick = (image) => {
+  const handleImageClick = (image, index, event) => {
     setSelectedImage(image);
+    setCurrentIndex(index);
   };
+
   const closeImageModal = () => {
     setSelectedImage(null);
   };
 
+  const nextImage = () => {
+    const newIndex = (currentIndex + 1) % project.gallery.length;
+    setSelectedImage(project.gallery[newIndex]);
+    setCurrentIndex(newIndex);
+  };
+
+  const prevImage = () => {
+    const newIndex =
+      (currentIndex - 1 + project.gallery.length) % project.gallery.length;
+    setSelectedImage(project.gallery[newIndex]);
+    setCurrentIndex(newIndex);
+  };
+
+  const handlePrevScroll = () => {
+    if (galleryRef.current) {
+      galleryRef.current.scrollBy({ left: -150, behavior: "smooth" });
+    }
+  };
+
+  const handleNextScroll = () => {
+    if (galleryRef.current) {
+      galleryRef.current.scrollBy({ left: 150, behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className="fixed inset-0 bg-light-primary/90 dark:bg-dark-primary/90 flex justify-center items-center z-50">
-      <div className="bg-light-secondary dark:bg-dark-background rounded-xl p-6 w-full max-w-4xl relative shadow-md h-fit">
-        <h2 className="title mb-4">{project.name}</h2>
+    <main
+      className="absolute h-full gap-3 p-5 overflow-y-scroll bg-[#a8aaae] dark:bg-[#0d1218]
+      grid-rows-auto grid grid-cols-1 md:grid-cols-[auto_auto_1fr_1fr] lg:grid-cols-[auto_auto_1fr_1fr_auto_auto] rounded-xl md:rounded-none md:rounded-b-xl text-light-generalText dark:text-dark-generalText"
+    >
+      {/* **** Title **************************************************************** */}
+      <section className="col-span-1 md:col-span-4 lg:col-span-6 text-">
+        {project.name}
+      </section>
 
-        <div className="flex flex-col lg:flex-row items-start md:justify-between shadow-md rounded-xl bg-light-background/60 dark:bg-dark-secondary/70 w-full">
-          <section className="w-full lg:w-[75.5%] md:border-r-2 md:border-r-light-background/90 md:dark:border-r-dark-secondary/60">
-            <div className="flex flex-col md:flex-row w-full shadow-md">
-              {/* main image container  ****************************************************************************** */}
-              <span className="overflow-hidden rounded-lg h-32 md:w-64 md:h-fit m-2 md-0 md:mt-2 md:ml-2">
-                <img
-                  src={project.mainImage}
-                  alt="Imagen principal del proyecto"
-                  className="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-200"
-                />
-              </span>
-              <span className="flex h-fit w-full justify-between flex-col md:flex-row px-3">
-                <p className="paragraph my-5 md:my-0">
-                  {project.fullDescription}
-                </p>
-              </span>
-            </div>
+      {/* **** Main Image *********************************************************** */}
+      <section className="bgProjectsDetail col-span-1 md:col-span-2 overflow-hidden rounded-lg h-20 md:h-full w-full md:w-52 lg:w-[28rem] relative flex justify-start items-start">
+        <img
+          src={project.mainImage}
+          loading="lazy"
+          alt="Imagen principal del proyecto"
+          className="absolute w-full h-full -md:right-5 md:object-right-bottom object-cover lg:object-center cursor-pointer hover:scale-110 transition-transform duration-200"
+        />
+      </section>
 
-            {/* *****************************************  CAROUSEL/GALERY  ***************************************** */}
+      {/* **** description ********************************************************** */}
+      <section className="bgProjectsDetail col-span-1 md:col-span-2 p-5 rounded-lg">
+        {project.fullDescription}
+      </section>
 
-            <section className="flex items-center py-3 gap-2 w-full">
-              {/* prev  ************************************ */}
-              <button
-                onClick={handlePrev}
-                className="bg-dark-secondary text-white p-2 rounded-full hover:bg-dark-secondary/80 transition-all"
-              >
-                {"<"}
-              </button>
-              {/* carousel container  ********************** */}
-              <div
-                ref={galleryRef}
-                className="flex gap-2 overflow-x-auto w-full py-2 scroll-smooth"
-                style={{
-                  scrollbarWidth: "none",
-                }}
-              >
-                {project.gallery.map((image, idx) => (
-                  <div
-                    key={idx}
-                    className="w-16 h-16 md:w-20 md:h-20 flex-shrink-0"
-                    onClick={() => handleImageClick(image)}
-                  >
-                    <img
-                      src={image}
-                      alt={`Imagen de la galería ${idx + 1}`}
-                      className="w-full h-full object-cover rounded-lg cursor-pointer hover:scale-110 transition-transform duration-200"
-                    />
-                  </div>
-                ))}
-              </div>
-              {/* next  *********************************** */}
-              <button
-                onClick={handleNext}
-                className="bg-dark-secondary text-white p-2 rounded-full hover:bg-dark-secondary/80 transition-all"
-              >
-                {">"}
-              </button>
-            </section>
-          </section>
-
-          {/* ******** Tech section ******** */}
-          <section className="w-full flex px-2 pl-5 justify-center">
-            <div className="w-full lg:w-44 my-2">
-              <h3 className="text-sm subtitle tracking-normal">Tecnologías:</h3>
-              <div className="flex gap-1 flex-wrap mt-1 mb-2">
-                {project.technologies.map((tech, idx) => (
-                  <div key={idx} className="flex items-center h-6">
-                    <div
-                      className={` ${tech.iconBg} h-full flex items-center px-1 rounded-l-lg text-sm shadow-sm`}
-                    >
-                      {tech.icon}
-                    </div>
-                    <span
-                      className={`${tech.nameBg} h-full flex items-center px-2.5 rounded-r-lg text-xs shadow-sm`}
-                    >
-                      {tech.name}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        </div>
-
-        {/* close  ********************** */}
-        <button
-          onClick={closeModal}
-          className="absolute btnStyle top-4 right-4 focus:outline-none"
-        >
-          X
-        </button>
-      </div>
-
-      {/* Modal - shows a large image *********************************************************** */}
-      {selectedImage && (
-        <div className="fixed inset-0 bg-black/60 flex justify-center items-center z-50">
-          <div className="relative bg-light-secondary dark:bg-dark-secondary p-6 rounded-lg">
-            <button
-              onClick={closeImageModal}
-              className="absolute top-4 right-4 text-white text-xl btnStyle"
+      {/* **** tech ***************************************************************** */}
+      <section className="bgProjectsDetail col-span-1 md:col-span-4 lg:col-span-2 lg:row-span-2 lg:w-44 flex flex-col px-2 justify-start rounded-lg">
+        <h3 className="text-sm subtitle tracking-normal">
+          {t("projectsInfo.technologies")}
+        </h3>
+        <span className="flex gap-1 flex-wrap mt-1 mb-2">
+          {project.mainTech?.map((techMain, idx) => (
+            <p
+              key={idx}
+              className="flex items-center h-6 dark:brightness-75 hover:brightness-125 dark:hover:brightness-150 drop-shadow hover:drop-shadow-lg cursor-pointer transition-all duration-200"
             >
-              X
-            </button>
-            <img
-              src={selectedImage}
-              alt="Imagen seleccionada"
-              className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg"
-            />
-          </div>
+              <strong
+                className={` ${techMain.iconBg} text-white h-full flex items-center px-1 rounded-l-lg text-sm shadow-sm`}
+              >
+                {techMain.icon}
+              </strong>
+              <span
+                className={`${techMain.nameBg} ${
+                  techMain.textColor || "text-black"
+                } h-full flex items-center px-2.5 rounded-r-lg text-xs shadow-sm`}
+              >
+                {techMain.name}
+              </span>
+            </p>
+          ))}
+          {project.addTech?.map((techAdd, i) => (
+            <p
+              key={i}
+              className="flex items-center h-6 dark:brightness-75 hover:brightness-125 dark:hover:brightness-150 drop-shadow hover:drop-shadow-lg cursor-pointer transition-all duration-200"
+            >
+              <strong
+                className={`${techAdd.iconBg} text-white h-full flex items-center px-1 rounded-l-lg text-sm shadow-sm`}
+              >
+                {techAdd.icon}
+              </strong>
+              <span
+                className={`${techAdd.nameBg} ${
+                  techAdd.textColor || "text-black"
+                } h-full flex items-center px-2.5 rounded-r-lg text-xs shadow-sm`}
+              >
+                {techAdd.name}
+              </span>
+            </p>
+          ))}
+        </span>
+      </section>
+
+      {/* **** key features ********************************************************* */}
+      <section className="bgProjectsDetail col-span-1 md:col-span-4 lg:col-span-3 flex flex-col py-1 px-2 justify-center rounded-lg">
+        <h3 className="text-base subTSingleProject tracking-normal ">
+          {t("projectsInfo.keyFeat")}
+        </h3>
+        <span className="flex gap-1 w-full flex-wrap mt-1 mb-2 text-sm">
+          {project.keyFeatures.map((tech, i) => (
+            <p
+              key={i}
+              className="flex items-start py-1 px-2 gap-1 rounded-lg drop-shadow-sm bg-[#e1e3e8] dark:bg-[#1a2634] hover:drop-shadow-lg hover:brightness-110 dark:hover:brightness-150 cursor-pointer opacity-70"
+            >
+              <span className="pt-1">
+                <IoCheckbox />
+              </span>
+              {tech}
+            </p>
+          ))}
+        </span>
+      </section>
+      {/* **** Links **************************************************************** */}
+      <section className="bgProjectsDetail col-span-1 md:col-span-4 lg:col-span-1 p-2 rounded-lg flex  flex-col justify-center items-center">
+        <p className="footerGitHub btnDemo flex flex-col md:flex-row lg:flex-col items-start gap-0 py-0">
+          <span className="flex flex-row items-center w-24 subTSingleProject">
+            <LuGithub className="paragraph iconFooter" />
+            {t("client")}
+          </span>
+          <a
+            href={project.githubFrontEnd}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline-animate subtitle text-sm flex flex-col w-full"
+          >
+            <span className="truncate -translate-y-2 pl-8">
+              {project.githubFrontEnd}
+            </span>
+          </a>
+        </p>
+        <p className="footerGitHub btnDemo flex flex-col md:flex-row lg:flex-col items-start gap-0 py-0">
+          <span className="flex flex-row items-center w-24 subTSingleProject">
+            <LuGithub className="paragraph iconFooter" />
+            {t("server")}
+          </span>
+          <a
+            href={project.githubBackend}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline-animate subtitle text-sm flex flex-col w-full"
+          >
+            <span className="truncate -translate-y-2  pl-8">
+              {project.githubBackend}
+            </span>
+          </a>
+        </p>
+        <p className="footerGitHub btnDemo flex flex-col md:flex-row lg:flex-col items-start gap-0 py-0">
+          <span className="flex flex-row items-center w-24 subTSingleProject">
+            <MdOutlineLaptopMac className="paragraph iconFooter" />
+            {t("demo")}
+          </span>
+          <a
+            href={project.liveLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline-animate subtitle text-sm flex flex-row w-full"
+          >
+            <span className="truncate -translate-y-2  pl-8">
+              {project.liveLink}
+            </span>
+          </a>
+        </p>
+      </section>
+
+      {/* **** carousel ************************************************************* */}
+      <section className="bgProjectsDetail col-span-1 md:col-span-4 lg:col-span-6 flex items-center py-3 px-1 md:px-5 gap-2 w-full rounded-lg">
+        <button
+          onClick={handlePrevScroll}
+          className="bg-dark-secondary text-white p-2 rounded-full hover:bg-dark-secondary/50 transition-all"
+        >
+          {"<"}
+        </button>
+
+        <div
+          ref={galleryRef}
+          className="flex gap-1 overflow-x-auto w-full py-1 scroll-smooth no-scrollbar"
+        >
+          {project.thumbnails.map((thumbnail, idx) => (
+            <div
+              key={idx}
+              className={`w-16 h-16 md:w-32 md:h-20 flex-shrink-0 transition-all no-scrollbar ${
+                currentIndex === idx
+                  ? "scale-110 border-2 border-[#cdcfd3] dark:border-[#111922] rounded-xl bg-[#cdcfd3] dark:bg-[#111922]"
+                  : ""
+              }`}
+              onClick={() => handleImageClick(project.gallery[idx], idx)}
+            >
+              <img
+                src={thumbnail}
+                loading="lazy"
+                alt={`Miniatura ${idx + 1}`}
+                className="w-full h-full object-cover rounded-lg cursor-pointer border-transparent border-4 hover:border-[#cdcfd3] hover:dark:border-[#111922] transition-all duration-200 aspect-square"
+              />
+            </div>
+          ))}
         </div>
+
+        <button
+          onClick={handleNextScroll}
+          className="bg-dark-secondary text-white p-2 rounded-full hover:bg-dark-secondary/80 transition-all"
+        >
+          {">"}
+        </button>
+      </section>
+
+      {/* **** return button ******************************************************** */}
+      <button
+        onClick={closeModal}
+        className="bgProjectsDetail fixed top-1 right-1 lg:right-6 shadow-md px-2 py-1 text-2xl rounded-lg"
+      >
+        <IoReturnUpBack />
+      </button>
+
+      {/* **** image modal ********************************************************** */}
+      {selectedImage && (
+        <section className="fixed inset-0 bg-black/90 flex justify-center items-center z-50">
+          <article className="relative bg-light-secondary dark:bg-dark-secondary p-6 rounded-lg flex items-center">
+            <div className="relative">
+              <button
+                onClick={closeImageModal}
+                className="absolute top-4 right-4 text-white text-xl btnStyle"
+              >
+                X
+              </button>
+              <img
+                src={selectedImage}
+                alt="Imagen seleccionada"
+                className="max-w-[90vw] max-h-[70vh] object-contain rounded-lg"
+              />
+            </div>
+            <button
+              onClick={prevImage}
+              className="absolute left-4 text-white text-2xl btnStyle"
+            >
+              {"<"}
+            </button>
+            <button
+              onClick={nextImage}
+              className="absolute right-4 text-white text-2xl btnStyle"
+            >
+              {">"}
+            </button>
+          </article>
+        </section>
       )}
-    </div>
+    </main>
   );
 };
 

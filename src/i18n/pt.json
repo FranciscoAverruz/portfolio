@@ -31,6 +31,10 @@
   "name": "Nome",
   "phone": "Telefone",
   "email": "E-mail",
+  "client": "Cliente",
+  "server": "Servidor",
+  "demo": "Demo",
+  "details": "Detalhes",
 
   "send": "Enviar",
 
@@ -45,13 +49,13 @@
     "notSent": "Erro ao enviar a mensagem. Tente novamente."
   },
 
-  "projects":{
+  "projects": {
     "pTitle": "Projetos em Construção!",
     "pFuture": "¡Em breve você poderá vê-los aqui!",
     "pContact": "Contacte-me"
   },
 
-  "srOnly":{
+  "srOnly": {
     "tDark": "Alternar para o modo escuro",
     "tLight": "Alternar para o modo claro"
   },
@@ -60,7 +64,23 @@
     "currentLanguage": "Alterar idioma, atualmente em {{language}}",
     "changeLanguage": "Mudar para {{language}}",
     "flagAlt": "Bandeira de {{language}}"
+  },
+  "projectsInfo": {
+    "description": "Encurtador de links eficiente e seguro com análises detalhadas e personalização.",
+    "technologies": "Tecnologias",
+    "keyFeat": "Características principais",
+    "projectfullDescription": "É uma plataforma para criar links curtos com estatísticas detalhadas. Os usuários podem criar, personalizar e gerenciar links facilmente por meio de um painel de controle intuitivo. Com o plano Pro, eles têm acesso a estatísticas, como o total de cliques classificados por dispositivo. Além disso, contas Premium permitem visualizar estatísticas por país e também usar domínios personalizados, oferecendo maior flexibilidade e profissionalismo no uso dos links. Independentemente do plano, os usuários desfrutam de uma experiência simples para otimizar e rastrear seus links.",
+    "keyFeatures": [
+      "Painel de controle",
+      "API para Gestão de Links e Usuários",
+      "Autenticação com JWT",
+      "Compressão de links",
+      "Gestão e análise de links encurtados",
+      "Gráficos dinâmicos para métricas de uso",
+      "Pagamentos com Stripe",
+      "Otimização com Vite e compressão",
+      "Gestão de Assinaturas:",
+      "Funções Pro e Premium"
+    ]
   }
 }
-
-
