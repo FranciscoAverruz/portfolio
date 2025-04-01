@@ -58,24 +58,23 @@ const ProjectCard = () => {
                     </h3>
                     <div className="flex flex-wrap gap-1">
                       {project.mainTech.map((tech, idx) => (
+                        console.log("<<<----- tech ----->>>", tech),
                         <div
                           key={idx}
                           className="flex items-center h-6 drop-shadow-md"
                         >
                           <div
-                            className={` ${tech.iconBg} text-white h-full flex items-center px-1 rounded-l-lg text-sm shadow-sm`}
+                            className={`${tech.iconBg} text-white h-full flex items-center px-1 rounded-l-lg text-sm shadow-sm`}
                           >
                             {tech.icon}
                           </div>
                           <span
-                            className={`${tech.nameBg} ${
-                              tech.textColor || "text-black"
-                            } h-full flex items-center px-2.5 rounded-r-lg text-xs shadow-sm`}
+                            className={`${tech.nameBg} ${tech.textColor || "text-black"} h-full flex items-center px-2.5 rounded-r-lg text-xs shadow-sm`}
                           >
                             {tech.name}
                           </span>
                         </div>
-                      ))}{" "}
+                      ))}
                       <span className="text-xl">...</span>
                     </div>
                   </div>

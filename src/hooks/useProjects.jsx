@@ -45,7 +45,7 @@ const iconMapping = {
 
 const useProjects = () => {
   const { t } = useTranslation();
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState([]); 
 
   useEffect(() => {
     const translatedProjects = projectsData.map((project) => ({

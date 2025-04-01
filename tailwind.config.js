@@ -1,7 +1,53 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  mode: "jit",
+  content: [
+    './index.html',
+    './src/**/*.{js,jsx,ts,tsx}',  // Asegúrate de que Tailwind esté procesando todos los archivos
+  ],
   darkMode: "selector",
+  safelist: [
+    "bg-tech-Reactjs",
+    "bg-tech-ReactjsDark",
+    "bg-tech-ReactRouter",
+    "bg-tech-ReactRouterDark",
+    "bg-tech-TailwindCSS",
+    "bg-tech-TailwindCSSDark",
+    "bg-tech-FramerMotion",
+    "bg-tech-FramerMotionDark",
+    "bg-tech-Chartjs",
+    "bg-tech-ChartjsDark",
+    "bg-tech-Axios",
+    "bg-tech-AxiosDark",
+    "bg-tech-Libphonenumberjs",
+    "bg-tech-LibphonenumberjsDark",
+    "bg-tech-JSONWeb",
+    "bg-tech-JSONWebDark",
+    "bg-tech-Stripe",
+    "bg-tech-StripeDark",
+    "bg-tech-Vite",
+    "bg-tech-ViteDark",
+    "bg-tech-Nodejs",
+    "bg-tech-NodejsDark",
+    "bg-tech-Expressjs",
+    "bg-tech-ExpressjsDark",
+    "bg-tech-MongoDB",
+    "bg-tech-MongoDBDark",
+    "bg-tech-Mongoose",
+    "bg-tech-MongooseDark",
+    "bg-tech-JWT",
+    "bg-tech-JWTDark",
+    "bg-tech-Nodemailer",
+    "bg-tech-NodemailerDark",
+    "bg-tech-SocketIO",
+    "bg-tech-SocketIODark",
+    "bg-tech-CORS",
+    "bg-tech-CORS_Dark",
+    "bg-tech-Swagger",
+    "bg-tech-SwaggerDark",
+    "bg-tech-Jest",
+    "bg-tech-JestDark"
+  ],
   theme: {
     extend: {
       boxShadow: {
@@ -48,41 +94,30 @@ export default {
           LibphonenumberjsDark: "#E64A19",
           JSONWeb: "#555555",
           JSONWebDark: "#000000",
-          Stripe: "#008CFC", // Color de Stripe backend (cerca del color principal)
-          StripeDark: "#006BB3", // Variante más oscura de Stripe
-
+          Stripe: "#008CFC",
+          StripeDark: "#006BB3",
           Vite: "#A5A9FF",
           ViteDark: "#646CFF",
-
-          Nodejs: "#68A063", // Color oficial de Node.js
-          NodejsDark: "#3C9D3D", // Variante más oscura de Node.js
-
-          Expressjs: "#000000", // El color de Express es muy básico (negro)
-          ExpressjsDark: "#3F3F3F", // Variante oscura de Express
-
-          MongoDB: "#47A248", // Color oficial de MongoDB
-          MongoDBDark: "#3E8E41", // Variante más oscura de MongoDB
-
-          Mongoose: "#6CBBF2", // Color oficial de Mongoose
-          MongooseDark: "#4F99CC", // Variante más oscura de Mongoose
-
-          JWT: "#000000", // Sin un color oficial, pero puedes usar negro para JWT
-          JWTDark: "#333333", // Variante oscura de JWT (de nuevo, negro)
-
-          Nodemailer: "#D14836", // Color oficial de Nodemailer (rojo)
-          NodemailerDark: "#B02E1A", // Variante más oscura de Nodemailer
-
-          SocketIO: "#000000", // Color oficial de Socket.io (negro)
-          SocketIODark: "#333333", // Variante más oscura de Socket.io
-
-          CORS: "#F7A800", // Color de CORS (amarillo cálido)
-          CORS_Dark: "#C67A00", // Variante más oscura de CORS
-
-          Swagger: "#85EA2D", // Color principal de Swagger
-          SwaggerDark: "#5EAC24", // Variante más oscura de Swagger
-
-          Jest: "#C21325", // Color principal de Jest
-          JestDark: "#9A0F1F", // Variante más oscura de Jest
+          Nodejs: "#68A063",
+          NodejsDark: "#3C9D3D",
+          Expressjs: "#000000",
+          ExpressjsDark: "#3F3F3F",
+          MongoDB: "#47A248",
+          MongoDBDark: "#3E8E41",
+          Mongoose: "#6CBBF2",
+          MongooseDark: "#4F99CC",
+          JWT: "#000000",
+          JWTDark: "#333333",
+          Nodemailer: "#D14836",
+          NodemailerDark: "#B02E1A",
+          SocketIO: "#000000",
+          SocketIODark: "#333333",
+          CORS: "#F7A800",
+          CORS_Dark: "#C67A00",
+          Swagger: "#85EA2D",
+          SwaggerDark: "#5EAC24",
+          Jest: "#C21325",
+          JestDark: "#9A0F1F",
         },
       },
       backgroundImage: {
