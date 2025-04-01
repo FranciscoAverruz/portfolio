@@ -7,6 +7,9 @@ export default {
   ],
   darkMode: "selector",
   safelist: [
+    "Audiowide-font",
+    "text-[#889cdb]",
+    "dark:text-[#9faee1]",
     "bg-tech-Reactjs",
     "bg-tech-ReactjsDark",
     "bg-tech-ReactRouter",

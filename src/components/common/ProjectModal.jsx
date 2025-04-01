@@ -6,6 +6,7 @@ import { LuGithub } from "react-icons/lu";
 import { IoCheckbox } from "react-icons/io5";
 import { MdOutlineLaptopMac } from "react-icons/md";
 import { useTranslation } from "react-i18next";
+import Brand from "@projectsInfo/Brand.jsx";
 
 const ProjectModal = ({ project, closeModal }) => {
   const { t } = useTranslation();
@@ -54,11 +55,17 @@ const ProjectModal = ({ project, closeModal }) => {
     >
       {/* **** Title **************************************************************** */}
       <section className="col-span-1 md:col-span-4 lg:col-span-6 text-">
-        {project.name}
+        <Brand
+          iconShortX={project.iconShortX}
+          fontType={project.fontType}
+          name={project.name}
+          sloganColor={project.sloganColor}
+          slogan={project.slogan}
+        />
       </section>
 
       {/* **** Main Image *********************************************************** */}
-      <section className="bgProjectsDetail col-span-1 md:col-span-2 overflow-hidden rounded-lg h-20 md:h-full w-full md:w-52 lg:w-[28rem] relative flex justify-start items-start">
+      <section className="bgProjectsDetail col-span-1 md:col-span-2 overflow-hidden rounded-lg h-40 md:h-full w-full md:w-52 lg:w-[29rem] relative flex justify-start items-start">
         <img
           src={project.mainImage}
           loading="lazy"
@@ -201,7 +208,7 @@ const ProjectModal = ({ project, closeModal }) => {
 
         <div
           ref={galleryRef}
-          className="flex gap-1 overflow-x-auto w-full py-1 scroll-smooth no-scrollbar"
+          className="flex gap-1 overflow-x-hidden w-full py-1 scroll-smooth no-scrollbar"
         >
           {project.thumbnails.map((thumbnail, idx) => (
             <div
@@ -258,13 +265,13 @@ const ProjectModal = ({ project, closeModal }) => {
             </div>
             <button
               onClick={prevImage}
-              className="absolute left-4 text-white text-2xl btnStyle"
+              className="absolute left-4 md:-left-4 text-white text-2xl btnStyle"
             >
               {"<"}
             </button>
             <button
               onClick={nextImage}
-              className="absolute right-4 text-white text-2xl btnStyle"
+              className="absolute right-4 md:-right-4 text-white text-2xl btnStyle"
             >
               {">"}
             </button>

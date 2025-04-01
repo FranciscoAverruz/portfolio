@@ -5,6 +5,7 @@ import ProjectModal from "@common/ProjectModal.jsx";
 import { LuGithub } from "react-icons/lu";
 import { CgPlayButtonO } from "react-icons/cg";
 import { useTranslation } from "react-i18next";
+import Brand from "@projectsInfo/Brand.jsx"
 
 const ProjectCard = () => {
   const { t } = useTranslation();
@@ -40,16 +41,16 @@ const ProjectCard = () => {
             </a>
 
             <article className="flex flex-col w-full md:pl-4">
-              <aside>
-                <h2 className="title text-lg w-full my-2 md:my-auto">
-                  <span className="Audiowide-font mr-2 text-2xl">short-X</span>
-                  {project.name}
-                </h2>
-              </aside>
-
+              <Brand 
+                iconShortX= {project.iconShortX}
+                fontType= {project.fontType}
+                name= {project.name}
+                sloganColor= {project.sloganColor}
+                slogan= {project.slogan}
+              />
               <div className="flex justify-between h-full flex-col md:flex-row">
                 <div className="flex flex-col md:px-5 justify-between w-full">
-                  <p className="paragraph h-full w-full">
+                  <p className="paragraph h-full w-full pt-5">
                     {project.description}
                   </p>
                   <div className="pt-2">
@@ -58,10 +59,9 @@ const ProjectCard = () => {
                     </h3>
                     <div className="flex flex-wrap gap-1">
                       {project.mainTech.map((tech, idx) => (
-                        console.log("<<<----- tech ----->>>", tech),
                         <div
                           key={idx}
-                          className="flex items-center h-6 drop-shadow-md"
+                          className="flex items-center h-6 dark:brightness-75 hover:brightness-125 dark:hover:brightness-150 drop-shadow hover:drop-shadow-lg cursor-pointer transition-all duration-200"
                         >
                           <div
                             className={`${tech.iconBg} text-white h-full flex items-center px-1 rounded-l-lg text-sm shadow-sm`}
@@ -69,7 +69,9 @@ const ProjectCard = () => {
                             {tech.icon}
                           </div>
                           <span
-                            className={`${tech.nameBg} ${tech.textColor || "text-black"} h-full flex items-center px-2.5 rounded-r-lg text-xs shadow-sm`}
+                            className={`${tech.nameBg} ${
+                              tech.textColor || "text-black"
+                            } h-full flex items-center px-2.5 rounded-r-lg text-xs shadow-sm`}
                           >
                             {tech.name}
                           </span>
