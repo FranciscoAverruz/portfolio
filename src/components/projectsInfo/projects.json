@@ -8,8 +8,10 @@
     "fullDescription": "projectsInfo.projectfullDescription",
     "keyFeatures": "projectsInfo.keyFeatures",
     "mainImage": "mainImageSTX.png",
-    "githubFrontEnd": "FranciscoAverruz/short-x_client",
-    "githubBackend": "FranciscoAverruz/short-x_server",
+    "githubFrontEndLink": "https://github.com/FranciscoAverruz/short-x_client",
+    "githubFrontEndText": "FranciscoAverruz/short-x_client",
+    "githubBackendLink": "https://github.com/FranciscoAverruz/short-x_server",
+    "githubBackendText": "FranciscoAverruz/short-x_server",
     "liveLink": "https://st-x.netlify.app",
     "thumbnails": [
         "/thumbnailsShortX/thLightA.png",

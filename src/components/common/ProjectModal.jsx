@@ -153,13 +153,13 @@ const ProjectModal = ({ project, closeModal }) => {
             {t("client")}
           </span>
           <a
-            href={project.githubFrontEnd}
+            href={project.githubFrontEndLink}
             target="_blank"
             rel="noopener noreferrer"
             className="underline-animate subtitle text-sm flex flex-col w-full"
           >
             <span className="truncate -translate-y-2 pl-8">
-              {project.githubFrontEnd}
+              {project.githubFrontEndText}
             </span>
           </a>
         </p>
@@ -169,13 +169,13 @@ const ProjectModal = ({ project, closeModal }) => {
             {t("server")}
           </span>
           <a
-            href={project.githubBackend}
+            href={project.githubBackendLink}
             target="_blank"
             rel="noopener noreferrer"
             className="underline-animate subtitle text-sm flex flex-col w-full"
           >
             <span className="truncate -translate-y-2  pl-8">
-              {project.githubBackend}
+              {project.githubBackendText}
             </span>
           </a>
         </p>
