@@ -7,7 +7,7 @@ const Projects = () => {
   const { t } = useTranslation();
 
   return (
-  <aside className="w-full h-full md:w-[90vw] lg:w-[70vw] flex items-start justify-start dark:text-white transition-all duration-300">
+  <aside className="w-full h-full md:w-[90vw] lg:w-[85vw] flex items-start justify-start dark:text-white transition-all duration-300">
     <ProjectCard />
   </aside>
   );

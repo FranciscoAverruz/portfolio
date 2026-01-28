@@ -253,7 +253,7 @@ const ProjectModal = ({ project, closeModal }) => {
             <div className="relative">
               <button
                 onClick={closeImageModal}
-                className="absolute top-4 right-4 text-white text-xl btnStyle"
+                className="absolute top-0 right-0 md:-top-4 md:-right-4 text-white text-xl btnStyle"
               >
                 X
               </button>

@@ -1,13 +1,13 @@
 {
   "greeting": "Olá",
   "IAm": "Eu sou o",
-  "profession": "Engenheiro de sistemas de informação e full stack developer",
+  "profession": "Engenheiro de Sistemas | Desenvolvedor Full Stack",
   "aText": {
-    "aT1": "Eu sou Engenheiro de Sistemas e Desenvolvedor Full Stack com uma ",
-    "aT2": "Certificação de Mestrado em Desenvolvimento Full Stack. ",
-    "aT3": "Especializo-me no desenvolvimento de software focado no usuário, com experiência em projetos colaborativos usando metodologias ágeis ",
-    "aT4": ", onde aperfeiçoei minhas habilidades em documentação técnica, análise de dados e resolução de problemas. Minha paixão pela tecnologia me impulsiona a contribuir com soluções inovadoras que agreguem valor e melhorem a experiência do usuário.",
-    "aT5": "Atualmente, trabalho com tecnologias como:"
+    "aT1": "Sou Engenheiro de Sistemas e Desenvolvedor Full Stack.",
+    "aT2": "Desenvolvo aplicações web modernas e escaláveis usando o stack MERN (MongoDB, Express, React e Node.js), com APIs REST, autenticação JWT e bancos de dados SQL e NoSQL.",
+    "aT3": "Participei de projetos colaborativos, aplicando metodologias ágeis",
+    "aT4": "e criando soluções eficientes, seguras e focadas na experiência do usuário.",
+    "aT5": "Atualmente trabalho com tecnologias como:"
   },
   "aboutNav": "Sobre mim",
   "projectsNav": "Projetos",
@@ -18,9 +18,12 @@
   "viewCV": "Ver currículo",
   "downloadCV": "Baixar currículo",
 
+  "frontend": "Front-end",
+  "backend": "Back-end",
+  "framework": "Framework",
   "database": "Banco de Dados",
   "testing": "Teste",
-  "versionsControl": "Controle de Versão",
+  "versionControl": "Controle de Versão",
   "libraries": "Bibliotecas",
 
   "ContactBtnLabel": "Contacte-me através de:",

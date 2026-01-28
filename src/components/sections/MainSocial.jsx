@@ -10,11 +10,16 @@ import VisibilityOnScroll from "@hooks/visibilityOnScroll.jsx";
 
 const MainSocial = () => {
   const location = useLocation(); 
+  const { t, i18n } = useTranslation();
   const handleViewCV = () => {
-    window.open("/CV/esp_FranciscoAverruz.pdf", "_blank");
+  const cvFiles = {
+    es: "/CV/esp_FranciscoAverruz.pdf",
+    en: "/CV/eng_FranciscoAverruz.pdf",
+    pt: "/CV/pt_FranciscoAverruz.pdf",
   };
-  const { t } = useTranslation();
-
+  const cvPath = cvFiles[i18n.language] || cvFiles.es;
+  window.open(cvPath, "_blank");
+};
   const isRouteAllowed =
   location.pathname !== "/" &&
   location.pathname !== "/about" &&

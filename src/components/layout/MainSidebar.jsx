@@ -16,8 +16,21 @@ const MainSidebar = ({ isAboutPage, isContactPage, bgBanner }) => {
         className={`${
           !isAboutPage ? "md:h-[68%]" : "md:h-[50%]"
         } absolute top-0 left-0 w-full h-[30%] md:h-[45%] lg:h-[20%] bg-[length:100%_100%] bg-no-repeat bg-center rounded-tl-2xl rounded-tr-2xl lg:rounded-tl-none lg:rounded-tr-none`}
-        style={{ backgroundImage: bgBanner }}
+        style={{
+          backgroundImage: bgBanner,
+          WebkitMaskImage:"linear-gradient(to bottom, rgba(0,0,0,1) 8%, rgba(0,0,0,0) 100%)",
+          WebkitMaskRepeat: "no-repeat",
+          WebkitMaskSize: "100% 100%",
+          maskImage:
+            "linear-gradient(to bottom, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%)",
+          maskRepeat: "no-repeat",
+          maskSize: "100% 100%",
+        }}
       >
+        <div
+          className="absolute inset-0 rounded-tl-2xl rounded-tr-2xl lg:rounded-tl-none lg:rounded-tr-none
+                  dark:bg-black/30 pointer-events-none"
+        ></div>
         <span
           className={`${
             isAboutPage ? "hidden" : "block"
@@ -31,7 +44,11 @@ const MainSidebar = ({ isAboutPage, isContactPage, bgBanner }) => {
           <Avatar />
         </div>
         <div className="grid grid-cols-1 w-full h-full z-10 md:flex-row-reverse">
-          <div className={`flex justify-center pb-5 lg:pb-0 ${!isAboutPage ? "pb-0" : ""}`}>
+          <div
+            className={`flex justify-center pb-5 lg:pb-0 ${
+              !isAboutPage ? "pb-0" : ""
+            }`}
+          >
             <SideBar />
           </div>
           <div

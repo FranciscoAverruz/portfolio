@@ -11,15 +11,24 @@ import { useLocation } from "react-router-dom";
 const MainContactBtn = () => {
   const [isHoveringViewCV, setIsHoveringViewCV] = useState(false);
   const [isHoveringDownloadCV, setIsHoveringDownloadCV] = useState(false);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const location = useLocation();
   const isContactPage = location.pathname === "/contact";
   const cvUrl = import.meta.env.VITE_CV_URL;
   const linkedIn = import.meta.env.VITE_LINKEDIN_URL;
   const gitHub = import.meta.env.VITE_GITHUB_URL;
 
+  const cvFiles = {
+    es: "/CV/esp_FranciscoAverruz.pdf",
+    en: "/CV/eng_FranciscoAverruz.pdf",
+    pt: "/CV/pt_FranciscoAverruz.pdf",
+  };
+
+  const getCVPath = () => cvFiles[i18n.language] || cvFiles.es;
+
   const handleViewCV = () => {
-    window.open("/CV/esp_FranciscoAverruz.pdf", "_blank");
+    const cvPath = getCVPath();
+    window.open(cvPath, "_blank");
   };
 
   return (
@@ -105,8 +114,8 @@ const MainContactBtn = () => {
                 )}
               </button>
               <a
-                href="/CV/esp_FranciscoAverruz.pdf"
-                download="esp_FranciscoAverruz.pdf"
+                href={getCVPath()}
+                download={getCVPath().split("/").pop()}
                 onMouseEnter={() => setIsHoveringDownloadCV(true)}
                 onMouseLeave={() => setIsHoveringDownloadCV(false)}
                 className="btnCV focusBtn"

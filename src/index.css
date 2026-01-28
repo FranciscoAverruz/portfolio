@@ -9,26 +9,26 @@
 }
 
 .subTSingleProject{
-  @apply text-light-active dark:text-dark-active font-semibold
+  @apply text-light-active dark:text-dark-active font-semibold;
 }
 
 @layer components {
   .layout {
-    @apply bg-white/70 dark:bg-dark-primary/70 backdrop-blur;
+    @apply bg-white/80 dark:bg-dark-primary/80 backdrop-blur shadow-md;
   }
 
   .btnStyle {
-    @apply text-base text-white hover:text-light-active hover:dark:text-dark-active tracking-wider
-    min-h-[40px] rounded-xl px-2 lg:py-1 sm:px-2 md:px-4 drop-shadow-lg 
-    bg-light-accent  hover:bg-light-primary  hover:focus:outline dark:bg-dark-accent dark:hover:bg-dark-secondary
-    transition ease-in-out duration-300 font-semibold;
+    @apply text-base text-white hover:text-light-active hover:dark:text-dark-active tracking-wider;
+    @apply min-h-[40px] rounded-xl px-2 lg:py-1 sm:px-2 md:px-4 drop-shadow-lg;
+    @apply bg-light-accent  hover:bg-light-primary  hover:focus:outline dark:bg-dark-accent dark:hover:bg-dark-secondary;
+    @apply transition ease-in-out duration-300 font-semibold;
   }
 
   .btnSecondary {
-    @apply text-base text-light-title dark:text-light-primary hover:text-light-background dark:hover:text-dark-active tracking-wider
-    min-h-[40px] rounded-xl  px-4 py-2 shadow-md
-    bg-light-secondary dark:bg-dark-background hover:bg-light-subtitle 
-     transition ease-in-out duration-300 focus:outline-none;
+    @apply text-base text-light-title dark:text-light-primary hover:text-light-background dark:hover:text-dark-active tracking-wider;
+    @apply min-h-[40px] rounded-xl  px-4 py-2 shadow-md;
+    @apply bg-light-secondary dark:bg-dark-background hover:bg-light-subtitle; 
+    @apply transition ease-in-out duration-300 focus:outline-none;
   }
 
   .btnDemo{
@@ -44,12 +44,10 @@
   }
 
   .inputStyle {
-    @apply text-light-generalText dark:text-dark-generalText text-sm
-    rounded-lg w-full h-10 p-2 shadow-sm
-    border border-gray-300 dark:border-gray-600 
-    focus:ring-blue-500 dark:focus:ring-blue-500 focus:ring focus:ring-opacity-50
-    bg-gray-50 dark:bg-gray-700     
-    block;
+    @apply text-light-generalText dark:text-dark-generalText text-sm rounded-lg w-full h-10 p-2 shadow-sm;
+    @apply border border-gray-300 dark:border-gray-600; 
+    @apply focus:ring-blue-500 dark:focus:ring-blue-500 focus:ring focus:ring-opacity-50;
+    @apply bg-gray-50 dark:bg-gray-700 block;
   }
 
   .btnCV {

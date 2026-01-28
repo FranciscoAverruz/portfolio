@@ -1,13 +1,13 @@
 {
   "greeting": "Hello",
   "IAm": "I am",
-  "profession": "Information systems engineer and full stack developer",
+  "profession": "Systems Engineer | Full Stack Developer",
   "aText": {
-    "aT1": "I am a Systems Engineer and Full Stack Developer with a ",
-    "aT2": "Master’s Certification in Full Stack Development. ",
-    "aT3": "I specialize in user-oriented software development, with experience in collaborative projects using agile methodologies ",
-    "aT4": ", where I have strengthened my skills in technical documentation, data analysis, and problem-solving. My passion for technology drives me to contribute innovative solutions that bring value and enhance user experience.",
-    "aT5": "I Currently work with technologies such as:"
+    "aT1": "I am a Systems Engineer and Full Stack Developer.",
+    "aT2": "I develop modern and scalable web applications using the MERN stack (MongoDB, Express, React, and Node.js), with REST APIs, JWT authentication, and SQL and NoSQL databases.",
+    "aT3": "I have participated in collaborative projects, applying agile methodologies",
+    "aT4": "and creating efficient, secure solutions focused on the user experience.",
+    "aT5": "I currently work with technologies such as:"
   },
 
   "aboutNav": "About me",
@@ -19,9 +19,12 @@
   "viewCV": "View resume",
   "downloadCV": "Download resume",
 
+  "frontend": "Frontend",
+  "backend": "Backend",
+  "framework": "Framework",
   "database": "Database",
   "testing": "Testing",
-  "versionsControl": "Versions Control",
+  "versionControl": "Versions Control",
   "libraries": "Libraries",
 
   "ContactBtnLabel": "Contact me through:",

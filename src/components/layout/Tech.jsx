@@ -14,10 +14,10 @@ const Tech = () => {
     frontend,
     backend,
     framework,
-    libraries,
     database,
     testing,
-    versionControl
+    versionControl,
+    libraries
   }), [frontend, backend, framework, libraries, database, testing, versionControl]);
 
   return (

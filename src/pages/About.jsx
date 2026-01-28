@@ -8,24 +8,27 @@ const About = () => {
 
   return (
     <Suspense fallback={<div>Loading Tech...</div>}>
-    <div className='mt-10'>
-        <p className='paragraph'>{t('aText.aT1')}
-          <strong>{t('aText.aT2')}</strong>
-          {t('aText.aT3')}
-          <strong>(SCRUM)</strong>
+      <div className='mt-10'>
+        <p className='paragraph'>
+          <strong>{t('aText.aT1')}</strong>{" "}
+          {t('aText.aT2').split('stack MERN').map((part, i, arr) => (
+            <>
+              {i > 0 && <strong>stack MERN</strong>}
+              {part}
+            </>
+          ))}{" "}
+          {t('aText.aT3')} <strong>(Scrum) </strong>
           {t('aText.aT4')}
         </p>
-        <p className='my-5 paragraph'>{t('aText.aT5')}</p>
-      <Suspense fallback={<div>Loading Tech...</div>}>
-        <div className='w-full md:block'>
+
+        <p className='mt-5 xl:mt-10 paragraph'>{t('aText.aT5')}</p>
+
+        <div className='w-full md:block xl:fixed xl:bottom-0 xl:left-0 xl:right-0 p-3 xl:p-9'>
           <Tech />
         </div>
-      </Suspense>
-    </div>
+      </div>
     </Suspense>
-  )
-}
-
+  );
+};
 
 export default About;
-

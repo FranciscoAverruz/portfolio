@@ -87,7 +87,7 @@ const ProjectCard = () => {
                     <p className="footerGitHub btnDemo">
                       <LuGithub className="paragraph iconFooter" />
                       <a
-                        href={project.githubFrontEnd}
+                        href={project.githubFrontEndLink}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="underline-animate subtitle text-sm"
@@ -98,7 +98,7 @@ const ProjectCard = () => {
                     <p className="footerGitHub btnDemo">
                       <LuGithub className="paragraph iconFooter" />
                       <a
-                        href={project.githubBackend}
+                        href={project.githubBackendLink}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="underline-animate subtitle text-sm"

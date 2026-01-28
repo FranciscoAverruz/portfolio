@@ -1,12 +1,12 @@
 {
   "greeting": "Hola",
   "IAm": "Soy",
-  "profession": "Ingeniero en sistemas de información y desarrollador full stack",
+  "profession": "Ingeniero en Sistemas | Full Stack Developer",
   "aText": {
-    "aT1": "Soy Ingeniero en Sistemas y Desarrollador Full Stack con una ",
-    "aT2": "Certificación de Máster en Full Stack Development. ",
-    "aT3": "Me especializo en el desarrollo de software orientado al usuario, con experiencia en proyectos colaborativos aplicando metodologías ágiles ",
-    "aT4": ", donde he fortalecido mis habilidades en documentación técnica, análisis de datos y resolución de problemas. Mi pasión por la tecnología me impulsa a contribuir con soluciones innovadoras que aporten valor y mejoren la experiencia de usuario.",
+    "aT1": "Soy Ingeniero en Sistemas y Desarrollador Full Stack.",
+    "aT2": "Desarrollo aplicaciones web modernas y escalables utilizando el stack MERN (MongoDB, Express, React y Node.js), con APIs REST, autenticación JWT y bases de datos SQL y NoSQL.",
+    "aT3": "He participado en proyectos colaborativos, aplicando metodologías ágiles",
+    "aT4": "y creando soluciones eficientes, seguras y centradas en la experiencia de usuario.",
     "aT5": "Actualmente trabajo con tecnologías como:"
   },
   "aboutNav": "Sobre mí",
@@ -18,9 +18,12 @@
   "viewCV": "Ver curriculum",
   "downloadCV": "Descargar curriculum",
 
+  "frontend": "Frontend",
+  "backend": "Backend",
+  "framework": "Framework",
   "database": "Base de Datos",
   "testing": "Pruebas",
-  "versionsControl": "Control de Versiones",
+  "versionControl": "Control de Versiones",
   "libraries": "Librerías",
 
   "ContactBtnLabel": "Contáctame a través de:",

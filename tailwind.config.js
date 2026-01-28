@@ -59,7 +59,8 @@ export default {
       colors: {
         link: "#FFC107",
         light: {
-          background: "#F0F4F8",
+          // background: "#F0F4F8",
+          background: "#C5CDD4",
           primary: "#BCCCE0",
           secondary: "#9FB3C8",
           accent: "#3A5F8F",
@@ -70,7 +71,8 @@ export default {
           active: "#0E6655",
         },
         dark: {
-          background: "#1A2633",
+          // background: "#1A2633",
+          background: "#05090E",
           primary: "#2E4057",
           secondary: "#3C5A77",
           accent: "#6C8AB6",
