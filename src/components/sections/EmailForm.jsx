@@ -10,7 +10,9 @@ import ImageWithLoader from "@common/ImageWithLoader.jsx";
 import { FormDataContext } from "@context/FormDataContext.jsx";
 
 const EmailForm = ({ onSubmit }) => {
+  const formStartTime = useRef(Date.now());
   const { t, i18n } = useTranslation();
+  const honeypotRef = useRef(null);
   const {
     countryOptions,
     selectedPrefix,
@@ -49,7 +51,7 @@ const EmailForm = ({ onSubmit }) => {
 
     if (name === "countryCode") {
       const selectedCountry = countryOptions.find(
-        (option) => option.code === value
+        (option) => option.code === value,
       );
       if (selectedCountry) {
         setSelectedPrefixCont(selectedCountry.prefix);
@@ -81,10 +83,11 @@ const EmailForm = ({ onSubmit }) => {
 
   const validateForm = () => {
     const newErrors = {};
-    
 
-    Object.keys({ name, phone, email, message }).forEach((key) => {
-      if (key !== "countryName" && !eval(key).trim()) {
+    const fields = { name, phone, email, message };
+
+    Object.entries(fields).forEach(([key, value]) => {
+      if (!value.trim()) {
         newErrors[key] = t("message.requiredField");
       }
     });
@@ -114,8 +117,17 @@ const EmailForm = ({ onSubmit }) => {
     }
 
     try {
-      await onSubmit({ name, phone, email, message, countryName });
-      setFeedbackMessage(t("message.sentSuccessfully"));
+      const response = await onSubmit({
+        name,
+        phone,
+        email,
+        message,
+        countryName,
+        userReferenceId: honeypotRef.current?.value || "",
+        formTime: Date.now() - formStartTime.current,
+      });
+
+      setFeedbackMessage(response.data || t("message.sentSuccessfully"));
       setIsSuccess(true);
       setName("");
       setPhone("");
@@ -125,8 +137,11 @@ const EmailForm = ({ onSubmit }) => {
       setCountryName("");
       setFlag("");
       setSelectedPrefixCont("+34");
+      if (honeypotRef.current) {
+        honeypotRef.current.value = "";
+      }
     } catch (error) {
-      setFeedbackMessage(t("message.notSent"));
+      setFeedbackMessage(error.message || t("message.notSent"));
       setIsSuccess(false);
     }
   };
@@ -134,7 +149,7 @@ const EmailForm = ({ onSubmit }) => {
   useEffect(() => {
     // Updates country and flag if languaje is changed
     const selectedCountry = countryOptions.find(
-      (option) => option.code === countryCode
+      (option) => option.code === countryCode,
     );
 
     if (selectedCountry) {
@@ -246,6 +261,19 @@ const EmailForm = ({ onSubmit }) => {
             className="h-24 md:h-[73px] inputStyle resize-none"
           ></textarea>
         </div>
+        <input
+          ref={honeypotRef}
+          type="text"
+          name="userReferenceId"
+          tabIndex="-1"
+          autoComplete="off"
+          aria-hidden="true"
+          style={{
+            position: "absolute",
+            left: "-10000px",
+            opacity: 0,
+          }}
+        />
 
         {/*  Feedback message  *********************************************************** */}
         {feedbackMessage && (

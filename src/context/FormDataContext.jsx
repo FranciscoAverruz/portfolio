@@ -23,7 +23,7 @@ const FormDataProvider = ({ children }) => {
     countryCode: countryCode,
     countryName: countryName,
     flag: flag,
-    selectedPrefixCont: selectedPrefixCont
+    selectedPrefixCont: selectedPrefixCont,
   });
 
   const resetForm = () => {
@@ -34,6 +34,7 @@ const FormDataProvider = ({ children }) => {
       message: "",
       countryCode: "ES",
       countryName: "",
+      company: "",
       flag: "",
       selectedPrefixCont: "+34"
     });
