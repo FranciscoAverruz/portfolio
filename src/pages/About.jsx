@@ -11,12 +11,16 @@ const About = () => {
       <div className='mt-10'>
         <p className='paragraph'>
           <strong>{t('aText.aT1')}</strong>{" "}
-          {t('aText.aT2').split('stack MERN').map((part, i, arr) => (
-            <>
-              {i > 0 && <strong>stack MERN</strong>}
-              {part}
-            </>
-          ))}{" "}
+          {(() => {
+            const [before, after] = t('aText.aT2').split('stack MERN');
+            return (
+              <>
+                {before}
+                <strong>stack MERN</strong>
+                {after}
+              </>
+            );
+          })()}{" "}
           {t('aText.aT3')} <strong>(Scrum) </strong>
           {t('aText.aT4')}
         </p>
